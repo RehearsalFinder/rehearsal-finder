@@ -3,14 +3,26 @@ $c-primary: #000;
 $c-secondary: #fff;
 $-grey: #aaa;
 
+// SHADOWS
+$s-basic: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
 // MEASUREMENTS
 $m-gutter: 1rem;
 
 // FONTS
 $f-primary: sans-serif;
 
-// IMPORTS
-@import 'resets';
-@import 'layout';
-@import 'top-nav';
+// BASE STYLE IMPORTS
+@import 'resets'; // base css resets
+@import 'layout'; // section and container styles, modifiers should be placed in page specific files
+@import 'grid'; // Base grid styles for displaying multiple cards
 
+// COMPONENT STYLE IMPORTS
+@import 'card'; // Base card styles for information / forms
+
+// PAGE SPECIFIC STYLES
+  // Application
+  @import 'top-nav'; // styles for top navigation located in 'application route'
+
+  // Index
+  @import 'hero'; // styles for hero section in '/'
