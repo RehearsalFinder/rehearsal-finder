@@ -3,7 +3,7 @@ $c-primary: #000;
 $c-secondary: #fff;
 $-grey: #aaa;
 
-// Shadows
+// SHADOWS
 $s-basic: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
 // MEASUREMENTS
@@ -12,49 +12,17 @@ $m-gutter: 1rem;
 // FONTS
 $f-primary: sans-serif;
 
-// IMPORTS
-@import 'resets';
-@import 'layout';
-@import 'top-nav';
-@import 'hero';
+// BASE STYLE IMPORTS
+@import 'resets'; // base css resets
+@import 'layout'; // section and container styles, modifiers should be placed in page specific files
+@import 'grid'; // Base grid styles for displaying multiple cards
 
+// COMPONENT STYLE IMPORTS
+@import 'card'; // Base card styles for information / forms
 
+// PAGE SPECIFIC STYLES
+  // Application
+  @import 'top-nav'; // styles for top navigation located in 'application route'
 
-// Featured Spaces Styles
-
-// Grid Styles
-.grid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: -$m-gutter;
-
-  &__item {
-    flex-basis: calc(100% / 2 - #{$m-gutter} - #{$m-gutter});
-    min-width: 23rem;
-    flex-grow: 1;
-    margin: $m-gutter;
-  }
-}
-
-// Card Styles
-.card {
-  box-shadow: $s-basic;
-  // display: flex;
-  // flex-direction: column;
-
-  &__image {
-    // width: 100%;
-    height: 15rem;
-    object-fit: contain;
-    overflow: hidden;
-
-    > img {
-      object-fit: contain;
-    }
-  }
-
-  &__info {
-    padding: $m-gutter;
-  }
-}
+  // Index
+  @import 'hero'; // styles for hero section in '/'
