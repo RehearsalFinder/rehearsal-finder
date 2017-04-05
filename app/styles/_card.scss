@@ -1,0 +1,24 @@
+// Card Styles
+.card {
+  box-shadow: $s-basic;
+  // display: flex;
+  // flex-direction: column;
+
+  &__image {
+    // width: 100%;
+    height: 15rem;
+    object-fit: contain;
+    overflow: hidden;
+
+    > img {
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    padding: $m-gutter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

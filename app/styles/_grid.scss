@@ -1,0 +1,14 @@
+// Grid Styles
+.grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: -$m-gutter;
+
+  &__item {
+    flex-basis: calc(100% / 2 - #{$m-gutter} - #{$m-gutter});
+    min-width: 23rem;
+    flex-grow: 1;
+    margin: $m-gutter;
+  }
+}

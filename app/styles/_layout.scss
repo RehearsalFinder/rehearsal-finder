@@ -1,8 +1,14 @@
 // Layout
 .section {
   padding: $m-gutter;
+
+  &__heading {
+    text-align: center;
+    margin: $m-gutter * 2;
+  }
 }
 
 .container {
-  max-width: 65rem;
+  max-width: 60rem;
+  margin: 0 auto;
 }
