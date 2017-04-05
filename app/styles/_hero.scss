@@ -1,0 +1,14 @@
+// HERO styles
+.section--hero {
+  background: url('http://placecera.com/500/500');
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  &__message {
+    text-align: center;
+  }
+}
