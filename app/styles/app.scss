@@ -18,7 +18,8 @@ $f-primary: sans-serif;
 @import 'grid'; // Base grid styles for displaying multiple cards
 
 // COMPONENT STYLE IMPORTS
-@import 'card'; // Base card styles for information / forms
+@import 'card'; // Base card styles for information
+@import 'forms'; // Base form styles for use inside of cards
 
 // PAGE SPECIFIC STYLES
   // Application
@@ -26,34 +27,3 @@ $f-primary: sans-serif;
 
   // Index
   @import 'hero'; // styles for hero section in '/'
-
-
-
-
-  // Working Area
-
-  // Forms
-
-  .card--form {
-    padding: $m-gutter;
-    max-width: 40rem;
-    margin: 0 auto;
-  }
-
-  .form {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 25rem;
-
-    &__heading {
-      text-align: center;
-    }
-
-    &__control {
-      display: block;
-      margin: $m-gutter 0;
-      width: 100%;
-      padding: $m-gutter / 2;
-      font-size: 1rem;
-    }
-  }
