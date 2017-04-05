@@ -1,0 +1,17 @@
+// TOP NAV
+.section--top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $c-primary;
+  color: $c-secondary;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+
+  > * + * {
+    margin-left: $m-gutter;
+  }
+}

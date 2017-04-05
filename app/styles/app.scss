@@ -1,6 +1,16 @@
-body {
-  margin: 1rem;
-  width: 200px;
-  background: red;
-  padding: 1rem;
-}
+// COLORS
+$c-primary: #000;
+$c-secondary: #fff;
+$-grey: #aaa;
+
+// MEASUREMENTS
+$m-gutter: 1rem;
+
+// FONTS
+$f-primary: sans-serif;
+
+// IMPORTS
+@import 'resets';
+@import 'layout';
+@import 'top-nav';
+
