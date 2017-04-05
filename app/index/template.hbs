@@ -116,30 +116,26 @@
 </div>
 
 
-{{!-- Sign Up Form --}}
-
+{{!-- Sign Up Form Section --}}
 <div class="section">
   <div class="container">
+
     <div class="sign-up">
       <h2 class="section__heading">Find your creative space!</h2>
-      <div class="card">
-        <form>
-          <p>
-            <input type="text">
-          </p>
-          <p>
-            <input type="text">
-          </p>
-          <p>
-            <input type="text">
-          </p>
-          <p>
-            <input type="text">
-          </p>
-          <button>Submit</button>
-        </form>
+      <div class="card card--form">
+        <div class="form">
+          <h3 class="form__heading">Sign Up!</h3>
+          <form>
+            {{input class="form__control" placeholder="First Name" type="text"}}
+            {{input class="form__control" placeholder="Last Name" type="text"}}
+            {{input class="form__control" placeholder="Email" type="text"}}
+            {{input class="form__control" placeholder="Password" type="password"}}
+            {{input class="form__control" placeholder="Confirm Password" type="password"}}
+            <button class="button">Submit</button>
+          </form>
+        </div>
       </div>
-
     </div>
+
   </div>
 </div>
