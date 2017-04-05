@@ -26,10 +26,13 @@ $f-primary: sans-serif;
 .grid {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: -$m-gutter;
 
   &__item {
     flex-basis: calc(100% / 2 - #{$m-gutter} - #{$m-gutter});
+    min-width: 23rem;
+    flex-grow: 1;
     margin: $m-gutter;
   }
 }
@@ -37,11 +40,18 @@ $f-primary: sans-serif;
 // Card Styles
 .card {
   box-shadow: $s-basic;
-
+  // display: flex;
+  // flex-direction: column;
 
   &__image {
-    width: 100%;
-    height: 5rem;
+    // width: 100%;
+    height: 15rem;
+    object-fit: contain;
+    overflow: hidden;
+
+    > img {
+      object-fit: contain;
+    }
   }
 
   &__info {
