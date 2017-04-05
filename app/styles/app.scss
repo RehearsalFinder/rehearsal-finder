@@ -18,7 +18,8 @@ $f-primary: sans-serif;
 @import 'grid'; // Base grid styles for displaying multiple cards
 
 // COMPONENT STYLE IMPORTS
-@import 'card'; // Base card styles for information / forms
+@import 'card'; // Base card styles for information
+@import 'forms'; // Base form styles for use inside of cards
 
 // PAGE SPECIFIC STYLES
   // Application
