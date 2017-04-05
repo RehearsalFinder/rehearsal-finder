@@ -3,6 +3,9 @@ $c-primary: #000;
 $c-secondary: #fff;
 $-grey: #aaa;
 
+// Shadows
+$s-basic: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
 // MEASUREMENTS
 $m-gutter: 1rem;
 
@@ -15,4 +18,33 @@ $f-primary: sans-serif;
 @import 'top-nav';
 @import 'hero';
 
+
+
+// Featured Spaces Styles
+
+// Grid Styles
+.grid {
+  display: flex;
+  justify-content: space-between;
+  margin: -$m-gutter;
+
+  &__item {
+    flex-basis: calc(100% / 2 - #{$m-gutter} - #{$m-gutter});
+    margin: $m-gutter;
+  }
+}
+
 // Card Styles
+.card {
+  box-shadow: $s-basic;
+
+
+  &__image {
+    width: 100%;
+    height: 5rem;
+  }
+
+  &__info {
+    padding: $m-gutter;
+  }
+}
