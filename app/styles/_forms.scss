@@ -25,3 +25,12 @@
     font-size: 1rem;
   }
 }
+
+.button {
+  background: $c-primary;
+  color: $c-secondary;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}

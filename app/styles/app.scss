@@ -21,6 +21,8 @@ $f-primary: sans-serif;
 // COMPONENT STYLE IMPORTS
 @import 'card'; // Base card styles for information
 @import 'forms'; // Base form styles for use inside of cards
+@import "ember-modal-dialog/ember-modal-structure"; // Stylings for Ember Modal Dialog
+@import "ember-modal-dialog/ember-modal-appearance"; // Stylings for Ember Modal Dialog
 
 // PAGE SPECIFIC STYLES
   // Application
