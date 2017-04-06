@@ -8,8 +8,6 @@
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   width: 100%;
   max-width: 25rem;
@@ -19,17 +17,25 @@
   }
 
   &__control {
-
+    display: block;
     margin: $m-gutter 0;
     width: 100%;
-    padding: $m-gutter / 2;
-    font-size: 1rem;
+
+
+    > * {
+      padding: $m-gutter / 2;
+      font-size: 1rem;
+    }
   }
 }
 
 // Date and Time Schedule form
 .date-form {
   &__time {
-    width: 100%;
+    padding: $m-gutter;
   }
+}
+
+.date__control {
+  margin: 0;
 }
