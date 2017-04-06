@@ -33,3 +33,20 @@ $f-primary: sans-serif;
 
 
 // Working area
+
+// Detail route
+.detail {
+  display: flex;
+
+  > * + * {
+    margin-left: $m-gutter;
+  }
+
+  &__info {
+    flex-basis: 75%;
+  }
+
+  &__schedule {
+    flex-basis: calc(25% - #{$m-gutter});
+  }
+}

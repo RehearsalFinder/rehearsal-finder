@@ -11,8 +11,8 @@
 {{!-- Detail --}}
 <div class="section">
   <div class="container">
-    <div class="detail">
 
+    <div class="detail">
       {{!-- Info --}}
       <div class="detail__info">
         <div class="detail__info--heading">
@@ -30,29 +30,38 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ad eos praesentium aperiam, maiores sed aliquam repudiandae. Ullam, atque doloremque perspiciatis dolor quia. Distinctio, illo. Quasi blanditiis ipsam eaque, harum.</p>
         </div>
 
-        <div class="detail__info--space">
-          <h3>Rules</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ad eos praesentium aperiam, maiores sed aliquam repudiandae. Ullam, atque doloremque perspiciatis dolor quia. Distinctio, illo. Quasi blanditiis ipsam eaque, harum.</p>
+        <div class="detail__info--perks">
+          <h3>Perks</h3>
+          <ul>
+            <li>Backline</li>
+            <li>Backline</li>
+            <li>Backline</li>
+            <li>Backline</li>
+          </ul>
         </div>
       </div>
 
       {{!-- Schedule --}}
       <div class="detail__schedule">
+
         <div class="detail__schedule--heading">
-          <h2>Book it for $25/hr</h2>
+
         </div>
 
         <div class="detail__schedule--date">
-
-          <form class="form form--schedule">
-            {{input class="form-control" type="date"}}
-            {{input type="checkbox" class="form-control date__time"}}
-            {{input type="checkbox" class="form-control date__time"}}
-            {{input type="checkbox" class="form-control date__time"}}
-            {{input type="checkbox" class="form-control date__time"}}
-            <button type="submit">Book It!</button>
-          </form>
+          <div class="form date-form">
+            <h2 class="form__heading">Book it for $25/hr</h2>
+            <form class="">
+              {{input class="form-control" type="date"}}
+              {{input type="checkbox" class="form__control date-form__time"}}
+              {{input type="checkbox" class="form__control date-form__time"}}
+              {{input type="checkbox" class="form__control date-form__time"}}
+              {{input type="checkbox" class="form__control date-form__time"}}
+              <button type="submit">Book It!</button>
+            </form>
+          </div>
         </div>
+
       </div>
 
     </div>

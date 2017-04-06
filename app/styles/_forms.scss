@@ -1,5 +1,6 @@
-// Forms
+// FORMS
 
+ // Sign-Up / Login Form
 .card--form {
   padding: $m-gutter;
   max-width: 40rem;
@@ -23,5 +24,12 @@
     width: 100%;
     padding: $m-gutter / 2;
     font-size: 1rem;
+  }
+}
+
+// Date and Time Schedule form
+.date-form {
+  &__time {
+    width: 100%;
   }
 }
