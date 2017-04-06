@@ -13,6 +13,7 @@ $m-gutter: 1rem;
 $f-primary: sans-serif;
 
 // BASE STYLE IMPORTS
+@import 'box-sizing'; // apply a natural box layout model to all elements, but allowing components to change
 @import 'resets'; // base css resets
 @import 'layout'; // section and container styles, modifiers should be placed in page specific files
 @import 'grid'; // Base grid styles for displaying multiple cards
