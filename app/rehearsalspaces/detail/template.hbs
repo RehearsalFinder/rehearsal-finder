@@ -8,10 +8,12 @@
   </div>
 </div>
 
+{{!-- Detail --}}
 <div class="section">
   <div class="container">
     <div class="detail">
 
+      {{!-- Info --}}
       <div class="detail__info">
         <div class="detail__info--heading">
           <h3>Space Name</h3>
@@ -34,16 +36,25 @@
         </div>
       </div>
 
+      {{!-- Schedule --}}
       <div class="detail__schedule">
         <div class="detail__schedule--heading">
           <h2>Book it for $25/hr</h2>
         </div>
 
         <div class="detail__schedule--date">
-          <input type="date">
-        </div>
 
+          <form class="form form--schedule">
+            {{input class="form-control" type="date"}}
+            {{input type="checkbox" class="form-control date__time"}}
+            {{input type="checkbox" class="form-control date__time"}}
+            {{input type="checkbox" class="form-control date__time"}}
+            {{input type="checkbox" class="form-control date__time"}}
+            <button type="submit">Book It!</button>
+          </form>
+        </div>
       </div>
+
     </div>
 
 
