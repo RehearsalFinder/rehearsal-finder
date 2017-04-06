@@ -9,25 +9,3 @@
 </div>
 
 {{outlet}}
-
-{{#if isShowingLoginModal}}
- -  {{#modal-dialog close="toggleLoginModal"
- -                  targetAttachment="center"
- -                  translucentOverlay=true}}
- -    {{#login-form}}{{/login-form}}
- -  {{/modal-dialog}}
- -
- -{{else if isShowingSignupModal}}
- -  {{#modal-dialog close="toggleSignUpModal"
- -                  targetAttachment="center"
- -                  translucentOverlay=true}}
- -    {{#signup-form}}{{/signup-form}}
- -  {{/modal-dialog}}
- -{{/if}}
- -
- -{{!-- FOOTER --}}
- -<div class="section">
- -  <div class="container">
- -
- -  </div>
- -</div>
