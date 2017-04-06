@@ -1,10 +1,12 @@
 // COLORS
 $c-primary: #000;
 $c-secondary: #fff;
-$-grey: #aaa;
+$c-grey: #aaa;
 
-// SHADOWS
+// SHADOWS & BORDERS
 $s-basic: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$b-basic: 0.1rem solid $c-grey;
+
 
 // MEASUREMENTS
 $m-gutter: 1rem;
@@ -40,16 +42,39 @@ $f-primary: sans-serif;
 // Detail route
 .detail {
   display: flex;
+  flex-wrap: wrap;
 
   > * + * {
-    margin-left: $m-gutter;
+    flex-grow: 1;
+    margin-left: $m-gutter * 4;
   }
 
   &__info {
-    flex-basis: 75%;
+    flex-basis: 70%;
+
+    > * + * {
+      display: flex;
+      align-items: flex-start;
+      border-top: $b-basic;
+      padding-bottom: $m-gutter * 4;
+
+
+      > * + * {
+        margin-left: $m-gutter * 4;
+      }
+    }
   }
 
+  // BOOKING FORM
   &__schedule {
-    flex-basis: calc(25% - #{$m-gutter});
+    flex-basis: calc(30% - #{$m-gutter * 4});
+
+  }
+}
+
+// Perks Section -- INFO
+.perks-list {
+  > * + * {
+    margin: $m-gutter 0;
   }
 }
