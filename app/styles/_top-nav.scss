@@ -14,4 +14,11 @@
   > * + * {
     margin-left: $m-gutter;
   }
+
+  &__button {
+    background: transparent;
+    color: $c-secondary;
+    border: none;
+    font-size: 1rem;
+  }
 }
