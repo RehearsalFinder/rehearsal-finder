@@ -19,10 +19,9 @@
   &__control {
     display: block;
     margin: $m-gutter 0;
-    width: 100%;
-
 
     > * {
+      width: 100%;
       padding: $m-gutter / 2;
       font-size: 1rem;
     }
