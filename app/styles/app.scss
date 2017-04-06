@@ -51,6 +51,7 @@ $f-primary: sans-serif;
 
     > * + * {
       display: flex;
+      align-items: flex-start;
       border-top: $b-basic;
       padding-bottom: $m-gutter * 4;
 

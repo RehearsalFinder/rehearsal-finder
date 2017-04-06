@@ -14,6 +14,10 @@
 
   &__heading {
     text-align: center;
+
+    &--left {
+      text-align: left;
+    }
   }
 
   &__control {
@@ -30,8 +34,9 @@
 
 // Date and Time Schedule form
 .date-form {
-  &__time {
-    padding: $m-gutter;
+
+  &__label {
+    padding: 0;
   }
 }
 
