@@ -1,0 +1,15 @@
+// BUTTONS
+
+.btn {
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: transparent;
+  color: inherit;
+
+  &--submit {
+    background: $c-primary;
+    color: $c-secondary;
+  }
+}
