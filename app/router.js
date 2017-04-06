@@ -8,7 +8,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function () {
   this;
-  this.route('rehearsalspaces');
+  this.route('rehearsalspaces', function() {
+    this.route('detail');
+  });
 });
 
 export default Router;
