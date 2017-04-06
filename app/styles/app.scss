@@ -31,47 +31,5 @@ $f-primary: sans-serif;
   // Index
   @import 'hero'; // styles for hero section in '/'
 
-
-
-
-// Working area
-
-// Detail route
-.detail {
-  display: flex;
-  flex-wrap: wrap;
-
-  > * + * {
-    flex-grow: 1;
-    margin-left: $m-gutter * 4;
-  }
-
-  &__info {
-    flex-basis: 70%;
-
-    > * + * {
-      display: flex;
-      align-items: flex-start;
-      border-top: $b-basic;
-      padding-bottom: $m-gutter * 4;
-
-
-      > * + * {
-        margin-left: $m-gutter * 4;
-      }
-    }
-  }
-
-  // BOOKING FORM
-  &__schedule {
-    flex-basis: calc(30% - #{$m-gutter * 4});
-
-  }
-}
-
-// Perks Section -- INFO
-.perks-list {
-  > * + * {
-    margin: $m-gutter 0;
-  }
-}
+  // RehearsalSpaces/Detail
+  @import 'detail'; // styles for detail info and booking info on the detail route

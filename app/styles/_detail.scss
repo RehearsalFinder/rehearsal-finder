@@ -1,0 +1,38 @@
+// DETAIL ROUTE
+.detail {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * + * {
+    flex-grow: 1;
+    margin-left: $m-gutter * 4;
+  }
+
+  &__info {
+    flex-basis: 70%;
+
+    > * + * {
+      display: flex;
+      align-items: flex-start;
+      border-top: $b-basic;
+      padding-bottom: $m-gutter * 4;
+
+
+      > * + * {
+        margin-left: $m-gutter * 4;
+      }
+    }
+  }
+
+  // Booking Form
+  &__schedule {
+    flex-basis: calc(30% - #{$m-gutter * 4});
+  }
+}
+
+// Perks Section -- INFO
+.perks-list {
+  > * + * {
+    margin: $m-gutter 0;
+  }
+}
