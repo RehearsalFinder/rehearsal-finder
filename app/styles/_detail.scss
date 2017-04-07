@@ -1,17 +1,27 @@
 // DETAIL ROUTE
+
+// flex container seperating two main sections info and schedule
 .detail {
   display: flex;
   flex-wrap: wrap;
 
-  > * + * {
+  > * { // allows each section to span to full width when layout wraps
     flex-grow: 1;
+  }
+
+  > * + * { // adds uniform amount of margin between info and schedule
     margin-left: $m-gutter * 4;
   }
 
+  // Info Section
   &__info {
     flex-basis: 70%;
 
-    > * + * {
+    > * {
+      padding-top: $m-gutter; // increase the padding-top of each info section to seperate data more clearly
+    }
+
+    > * + * { // adds a border and unified space between content and border on each item except the first
       display: flex;
       align-items: flex-start;
       border-top: $b-basic;
@@ -19,16 +29,18 @@
 
 
       > * + * {
-        margin-left: $m-gutter * 4;
+        margin-left: $m-gutter * 4; // seperates content title from content data
       }
     }
   }
 
-  // Booking Form
+  // Schedule Section
   &__schedule {
     flex-basis: calc(30% - #{$m-gutter * 4});
   }
 }
+
+
 
 // Perks Section -- INFO
 .perks-list {
