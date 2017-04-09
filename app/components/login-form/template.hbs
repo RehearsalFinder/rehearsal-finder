@@ -2,11 +2,13 @@
 
 {{!-- {{yield}} --}}
 
-<div class="form">
-  <h3 class="form__heading">Login</h3>
-  <form>
-    {{input class="form__control" placeholder="Email" type="text"}}
-    {{input class="form__control" placeholder="Password" type="password"}}
-    <button class="btn btn--submit">Submit</button>
-  </form>
+<div class="card--form">
+  <div class="form">
+    <h3 class="form__heading">Login</h3>
+    <form>
+      <p class="form__control">{{input type="text" placeholder="Email"}}</p>
+      <p class="form__control">{{input type="text" placeholder="Password"}}</p>
+      <button class="btn btn--submit">Submit</button>
+    </form>
+  </div>
 </div>

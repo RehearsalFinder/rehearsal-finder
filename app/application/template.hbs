@@ -4,8 +4,8 @@
   <div class="nav-list">
     <p class="nav-list__item">Home</p>
     <p class="nav-list__item">Spaces</p>
-    <button {{action "toggleLoginModal"}} class="nav-list__item btn" >Login</button>
-    <button {{action "toggleSignUpModal"}} class="nav-list__item btn" >Sign Up</button>
+    <button {{action "toggleLoginModal"}} class="nav-list__item btn">Login</button>
+    <button {{action "toggleSignUpModal"}} class="nav-list__item btn">Sign Up</button>
   </div>
 </div>
 
@@ -15,14 +15,14 @@
   {{#modal-dialog close="toggleLoginModal"
                   targetAttachment="center"
                   translucentOverlay=true}}
-    {{#login-form}}{{/login-form}}
+    {{#login-form class="modal"}}{{/login-form}}
   {{/modal-dialog}}
 
 {{else if isShowingSignupModal}}
   {{#modal-dialog close="toggleSignUpModal"
                   targetAttachment="center"
                   translucentOverlay=true}}
-    {{#signup-form}}{{/signup-form}}
+    {{#signup-form class="modal"}}{{/signup-form}}
   {{/modal-dialog}}
 {{/if}}
 

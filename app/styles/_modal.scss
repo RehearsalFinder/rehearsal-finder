@@ -1,0 +1,11 @@
+// Styles for the modal components
+
+.ember-modal-dialog.ember-modal-dialog-target-attachment-center.ember-view {
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 25rem;
+}
