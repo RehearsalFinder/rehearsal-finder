@@ -2,6 +2,7 @@
 $c-primary: #000;
 $c-secondary: #fff;
 $c-grey: #aaa;
+$c-danger: red;
 
 // SHADOWS & BORDERS
 $s-basic: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -40,6 +41,15 @@ $f-primary: sans-serif;
 .dashboard {
   display: flex;
   justify-content: space-between;
+
+  &__sidebar {
+    flex-basis: 25%;
+  }
+
+  &__content {
+    flex-basis: calc(75% - #{$m-gutter * 4});
+    margin-left: $m-gutter * 4;
+  }
 }
 
 
