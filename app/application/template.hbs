@@ -1,11 +1,36 @@
 <div class="section section--top-nav">
   <h1 class="logo top-nav__logo">Rehearsal Finder</h1>
   <div class="nav-list">
+
     {{#link-to 'index' class="nav-list__item"}}Home{{/link-to}}
     {{#link-to 'rehearsalspaces' class="nav-list__item"}}Spaces{{/link-to}}
-    <p class="nav-list__item">Login</p>
-    <p class="nav-list__item">Sign Up</p>
+    <button {{action "toggleLoginModal"}} class="nav-list__item btn">Login</button>
+    <button {{action "toggleSignUpModal"}} class="nav-list__item btn">Sign Up</button>
+
   </div>
 </div>
 
 {{outlet}}
+
+
+{{#if isShowingLoginModal}}
+  {{#modal-dialog close="toggleLoginModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+    {{#login-form class="modal"}}{{/login-form}}
+  {{/modal-dialog}}
+
+{{else if isShowingSignupModal}}
+  {{#modal-dialog close="toggleSignUpModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+    {{#signup-form class="modal"}}{{/signup-form}}
+  {{/modal-dialog}}
+{{/if}}
+
+{{!-- FOOTER --}}
+<div class="section">
+  <div class="container">
+
+  </div>
+</div>
