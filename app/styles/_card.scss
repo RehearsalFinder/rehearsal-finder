@@ -20,5 +20,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &__alone { // for use when no other content is present in .card__info
+      justify-content: center;
+    }
+
   }
 }
