@@ -15,6 +15,10 @@ $m-gutter: 1rem;
 // FONTS
 $f-primary: sans-serif;
 
+
+// THIRD PARTY IMPORTS
+// @import url("https://unpkg.com/leaflet@1.0.3/dist/leaflet.css");
+
 // BASE STYLE IMPORTS
 @import 'box-sizing'; // apply a natural box layout model to all elements, but allowing components to change
 @import 'resets'; // base css resets
@@ -35,6 +39,16 @@ $f-primary: sans-serif;
 
   // Index
   @import 'hero'; // styles for hero section in '/'
+
+
+
+
+
+// Map styles
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
 
 
 // Rehearsal Spaces page layout

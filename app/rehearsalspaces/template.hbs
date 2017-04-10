@@ -14,6 +14,21 @@
   </div>
 
   <div class="page__right">
-    {{!-- We gonna put in a big ole map right here --}}
+    {{#leaflet-map lat=lat lng=lng zoom=zoom}}
+      {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+
+      {{#marker-layer location=diamondSound}}
+        {{#popup-layer}}
+          <h3>Diamond Sound Studios</h3>
+        {{/popup-layer}}
+      {{/marker-layer}}
+
+      {{#marker-layer location=inkBuilding}}
+        {{#popup-layer}}
+          <h3>Ink Building</h3>
+        {{/popup-layer}}
+      {{/marker-layer}}
+
+    {{/leaflet-map}}
   </div>
 </div>
