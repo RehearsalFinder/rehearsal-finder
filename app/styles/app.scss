@@ -41,14 +41,22 @@ $f-primary: sans-serif;
 .dashboard {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: $m-gutter;
 
   &__sidebar {
     flex-basis: 25%;
+    flex-grow: 1;
   }
 
   &__content {
     flex-basis: calc(75% - #{$m-gutter * 4});
+    flex-grow: 1;
     margin-left: $m-gutter * 4;
+
+    > * + * {
+      margin-top: $m-gutter * 2;
+    }
   }
 }
 
