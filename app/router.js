@@ -11,6 +11,7 @@ Router.map(function () {
   this.route('rehearsalspaces', function() {
     this.route('detail');
   });
+  this.route('user-dashboard');
 });
 
 export default Router;
