@@ -4,10 +4,13 @@
     <div class="section section--spaces">
       <div class="container">
         <div class="grid">
-          {{#space-card}}{{/space-card}}
-          {{#space-card}}{{/space-card}}
-          {{#space-card}}{{/space-card}}
-          {{#space-card}}{{/space-card}}
+
+          {{#each model as |space|}}
+            {{#link-to 'rehearsalspaces.detail' rehearsalspaces.id}}
+              {{#space-card name=space.name city=space.city state=space.state costPerHour=space.costPerHour}}{{/space-card}}
+            {{/link-to}}
+          {{/each}}
+
         </div>
       </div>
     </div>
