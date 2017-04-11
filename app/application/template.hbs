@@ -17,14 +17,14 @@
   {{#modal-dialog close="toggleLoginModal"
                   targetAttachment="center"
                   translucentOverlay=true}}
-    {{#login-form class="modal"}}{{/login-form}}
+      {{#login-form changeset=(changeset model) loginUser=(action "loginUser") }}{{/login-form}}
   {{/modal-dialog}}
 
 {{else if isShowingSignupModal}}
   {{#modal-dialog close="toggleSignUpModal"
                   targetAttachment="center"
                   translucentOverlay=true}}
-    {{#signup-form class="modal"}}{{/signup-form}}
+    {{#signup-form}}{{/signup-form}}
   {{/modal-dialog}}
 {{/if}}
 

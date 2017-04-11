@@ -6,9 +6,23 @@
   <div class="form">
     <h3 class="form__heading">Login</h3>
     <form>
-      <p class="form__control">{{input type="text" placeholder="Email"}}</p>
-      <p class="form__control">{{input type="text" placeholder="Password"}}</p>
-      <button class="btn btn--submit">Submit</button>
+      <p class="form__control">
+        {{input value=changeset.email
+          type="text" placeholder="Email"}}
+      </p>
+      <p class="form__control">
+        {{input value=changeset.password
+          type="text" placeholder="Password"}}
+      </p>
+      <button class="btn btn--submit" {{action "loginUser" }}>Login</button>
     </form>
+
+    {{#each (get (get changeset.error property) 'validation') as |error|}}
+      <ul>
+        <li>{{error}}</li>
+      </ul>
+    {{/each}}
+
+    {{log changeset}}
   </div>
 </div>

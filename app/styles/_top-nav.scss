@@ -1,25 +1,25 @@
 // TOP NAV
 .section--top-nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   background: $c-primary;
   color: $c-secondary;
 }
 
 .nav-list {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   > * + * {
     margin-left: $m-gutter;
   }
 
   &__button {
+    border: 0;
     background: transparent;
     color: $c-secondary;
-    border: none;
     font-size: 1rem;
   }
 }

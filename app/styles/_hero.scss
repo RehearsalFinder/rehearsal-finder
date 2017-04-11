@@ -1,12 +1,12 @@
 // HERO styles
 .section--hero {
-  background: url('http://www.sir-usa.com/location/los-angeles/photos-stage-5/5.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 40rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 40rem;
+  background: url('http://www.sir-usa.com/location/los-angeles/photos-stage-5/5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   color: $c-secondary;
 }
 

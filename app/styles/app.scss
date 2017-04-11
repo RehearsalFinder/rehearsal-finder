@@ -4,7 +4,7 @@ $c-secondary: #fff;
 $c-grey: #aaa;
 
 // SHADOWS & BORDERS
-$s-basic: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$s-basic: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 $b-basic: 0.1rem solid $c-grey;
 
 
@@ -25,15 +25,15 @@ $f-primary: sans-serif;
 // COMPONENT STYLE IMPORTS
 @import 'card'; // Base card styles for information
 @import 'forms'; // Base form styles for use inside of cards
-@import "ember-modal-dialog/ember-modal-structure"; // Stylings for Ember Modal Dialog
-@import "ember-modal-dialog/ember-modal-appearance"; // Stylings for Ember Modal Dialog
+@import 'ember-modal-dialog/ember-modal-structure'; // Stylings for Ember Modal Dialog
+@import 'ember-modal-dialog/ember-modal-appearance'; // Stylings for Ember Modal Dialog
 
 // PAGE SPECIFIC STYLES
-  // Application
-  @import 'top-nav'; // styles for top navigation located in 'application route'
+// Application
+@import 'top-nav'; // styles for top navigation located in 'application route'
 
-  // Index
-  @import 'hero'; // styles for hero section in '/'
+// Index
+@import 'hero'; // styles for hero section in '/'
 
 
 
@@ -56,8 +56,8 @@ $f-primary: sans-serif;
     > * + * {
       display: flex;
       align-items: flex-start;
-      border-top: $b-basic;
       padding-bottom: $m-gutter * 4;
+      border-top: $b-basic;
 
 
       > * + * {
