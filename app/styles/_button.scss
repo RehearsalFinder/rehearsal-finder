@@ -3,13 +3,32 @@
 .btn {
   border: none;
   border-radius: 0.2rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
-  background: transparent;
-  color: inherit;
+  background: $c-secondary;
+  color: $c-primary;
+
+  &:active {
+    position: relative;
+    top: 2px;
+    left: 0.5px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--center {
+    width: inherit;
+  }
 
   &--submit {
     background: $c-primary;
+    color: $c-secondary;
+  }
+
+  &--danger {
+    background: $c-danger;
     color: $c-secondary;
   }
 }

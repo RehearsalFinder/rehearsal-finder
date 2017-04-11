@@ -1,5 +1,5 @@
 <div class="section section--top-nav">
-  <h1 class="logo top-nav__logo">Rehearsal Finder</h1>
+  <h1 class="logo">Rehearsal Finder</h1>
   <div class="nav-list">
 
     {{#link-to 'index' class="nav-list__item"}}Home{{/link-to}}
@@ -10,8 +10,9 @@
   </div>
 </div>
 
-{{outlet}}
-
+<div class="wrapper">
+  {{outlet}}
+</div>
 
 {{#if isShowingLoginModal}}
   {{#modal-dialog close="toggleLoginModal"
