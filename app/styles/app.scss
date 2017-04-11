@@ -37,6 +37,11 @@ $f-primary: sans-serif;
   @import 'hero'; // styles for hero section in '/'
 
 
+
+.wrapper {
+  padding-top: 4rem;
+}
+
 // User Dashboard Styles
 .dashboard {
   display: flex;
