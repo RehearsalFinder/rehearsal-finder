@@ -10,8 +10,9 @@
   </div>
 </div>
 
-{{outlet}}
-
+<div class="wrapper">
+  {{outlet}}
+</div>
 
 {{#if isShowingLoginModal}}
   {{#modal-dialog close="toggleLoginModal"
