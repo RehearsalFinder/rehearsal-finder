@@ -40,65 +40,24 @@ $f-primary: sans-serif;
   // Index
   @import 'hero'; // styles for hero section in '/'
 
-// Map styles
-.leaflet-container {
-  width: 100%;
-  height: 100%;
-}
+  // Rehearsal Spaces
+  @import 'spaces'; // styles for '/rehearsalspaces'
+  @import 'map'; // styles for leaflet map
 
-// Rehearsal Spaces page layout
+  // Rehersal Spaces - Detail
+  @import 'detail'; // styles for '/rehearsalspaces/detail'
 
-.section--spaces {
-  padding: $m-gutter * 2;
-}
-.page {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-
-  &__left {
-    position: relative;
-    flex-basis: 40%;
-  }
-
-  &__right {
-    position: fixed;
-    top: 0;
-    right: 0;
-    flex-basis: 60%;
-    width: 60%;
-    height: 100vh;
-    background: blue;
-  }
-}
-
-.wrapper {
-  padding-top: 4rem;
-}
+  // User Dashboard
+  @import 'dashboard'; // styles for '/user-dashboard'
 
 
-// User Dashboard Styles
-.dashboard {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: $m-gutter;
 
-  &__sidebar {
-    flex-basis: 25%;
-    flex-grow: 1;
-  }
 
-  &__content {
-    flex-basis: calc(75% - #{$m-gutter * 4});
-    flex-grow: 1;
-    margin-left: $m-gutter * 4;
 
-    > * + * {
-      margin-top: $m-gutter * 2;
-    }
-  }
-}
+
+
+
+
 
 
 
@@ -109,43 +68,3 @@ $f-primary: sans-serif;
 
 
 // Working area
-
-// Detail route
-.detail {
-  display: flex;
-  flex-wrap: wrap;
-
-  > * + * {
-    flex-grow: 1;
-    margin-left: $m-gutter * 4;
-  }
-
-  &__info {
-    flex-basis: 70%;
-
-    > * + * {
-      display: flex;
-      align-items: flex-start;
-      border-top: $b-basic;
-      padding-bottom: $m-gutter * 4;
-
-
-      > * + * {
-        margin-left: $m-gutter * 4;
-      }
-    }
-  }
-
-  // BOOKING FORM
-  &__schedule {
-    flex-basis: calc(30% - #{$m-gutter * 4});
-
-  }
-}
-
-// Perks Section -- INFO
-.perks-list {
-  > * + * {
-    margin: $m-gutter 0;
-  }
-}
