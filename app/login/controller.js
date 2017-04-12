@@ -1,6 +1,10 @@
 import Ember from 'ember';
+import validator from './validator';
 
 export default Ember.Controller.extend({
+  session: Ember.inject.service(),
+
+  validator,
   actions: {
     async loginUser(changeset) {
       await changeset.validate();

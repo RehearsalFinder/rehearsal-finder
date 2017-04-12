@@ -1,8 +1,10 @@
 import Ember from 'ember';
+import validator from './validator';
 
 export default Ember.Controller.extend({
+  validator,
   actions: {
-    async loginUser(changeset) {
+    async saveUser(changeset) {
       await changeset.validate();
 
       if (changeset.get('isInvalid')) {
@@ -11,10 +13,11 @@ export default Ember.Controller.extend({
 
       await changeset.save();
 
-      await this.get('session').authenticate('authenticator:token', {
-        identification: this.get('model.email'),
-        password: this.get('model.password'),
-      });
+      const user = this.store.createRecord('user', this.model);
+
+      await user.save();
+
+      this.transitionToRoute('login');
     },
   }
 });
