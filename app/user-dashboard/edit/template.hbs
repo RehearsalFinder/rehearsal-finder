@@ -6,5 +6,9 @@
       <p class="form__control">{{input type="text" placeholder="Phone Number" value=formValues.phone}}</p>
       <p class="form__control">{{input type="text" placeholder="Email Address" value=formValues.email}}</p>
       <button class="btn btn--submit">Submit</button>
+
+      {{#link-to 'user-dashboard.index'}}
+        <button class="btn btn--danger">Cancel</button>
+      {{/link-to}}
     </form>
   </div>
