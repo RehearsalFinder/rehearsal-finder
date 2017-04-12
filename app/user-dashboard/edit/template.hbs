@@ -1,0 +1,10 @@
+
+  <div class="form" {{action "updateProfile" on="submit"}}>
+    <h3 class="form__heading">Update Profile Info</h3>
+    <form>
+      <p class="form__control">{{input type="text" placeholder="Name" value=formValues.name}}</p>
+      <p class="form__control">{{input type="text" placeholder="Phone Number" value=formValues.phone}}</p>
+      <p class="form__control">{{input type="text" placeholder="Email Address" value=formValues.email}}</p>
+      <button class="btn btn--submit">Submit</button>
+    </form>
+  </div>

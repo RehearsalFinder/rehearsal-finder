@@ -15,7 +15,9 @@
               <h3>Name</h3>
               <h4>615-123-4567</h4>
               <h4>youremail@email.com</h4>
-              <button class="btn btn--submit btn--center">Update Info</button>
+              {{#link-to 'user-dashboard.edit'}}
+                <button class="btn btn--submit btn--center">Update Info</button>
+              {{/link-to}}
             </div>
           </div>
         </div>
@@ -24,160 +26,9 @@
 
       {{!-- DASHBOARD CONTENT --}}
       <div class="dashboard__content">
-
-        {{!-- Scheduled Rehearsals --}}
-        <div class="card">
-          <div class="card__heading">
-            <h2>Scheduled Rehearsals</h2>
-          </div>
-
-          <div class="card__info">
-
-            <ul class="card__list">
-              <li class="card__list__item">
-                <div class="list-left">
-                  <h3 class="list-left__title">That 70's House</h3>
-                  <p class="list-left__address">1234 Awesome St Nashville, TN 37098</p>
-                </div>
-                <div class="list-right">
-                  <p class="list-right__date">7:00pm - 10:00pm, 04/15/2017</p>
-                  <div  class="list-right__options">
-                    <button  class="btn btn--submit">Contact Host</button>
-                    <button class="btn btn--danger">Cancel</button>
-                  </div>
-                </div>
-              </li>
-
-              <li class="card__list__item">
-                <div class="list-left">
-                  <h3 class="list-left__title">That 70's House</h3>
-                  <p class="list-left__address">1234 Awesome St Nashville, TN 37098</p>
-                </div>
-                <div class="list-right">
-                  <p class="list-right__date">7:00pm - 10:00pm, 04/15/2017</p>
-                  <div  class="list-right__options">
-                    <button  class="btn btn--submit">Contact Host</button>
-                    <button class="btn btn--danger">Cancel</button>
-                  </div>
-                </div>
-              </li>
-
-              <li class="card__list__item">
-                <div class="list-left">
-                  <h3 class="list-left__title">That 70's House</h3>
-                  <p class="list-left__address">1234 Awesome St Nashville, TN 37098</p>
-                </div>
-                <div class="list-right">
-                  <p class="list-right__date">7:00pm - 10:00pm, 04/15/2017</p>
-                  <div  class="list-right__options">
-                    <button  class="btn btn--submit">Contact Host</button>
-                    <button class="btn btn--danger">Cancel</button>
-                  </div>
-                </div>
-              </li>
-
-              <li class="card__list__item">
-                <div class="list-left">
-                  <h3 class="list-left__title">That 70's House</h3>
-                  <p class="list-left__address">1234 Awesome St Nashville, TN 37098</p>
-                </div>
-                <div class="list-right">
-                  <p class="list-right__date">7:00pm - 10:00pm, 04/15/2017</p>
-                  <div  class="list-right__options">
-                    <button  class="btn btn--submit">Contact Host</button>
-                    <button class="btn btn--danger">Cancel</button>
-                  </div>
-                </div>
-              </li>
-
-              <li class="card__list__item">
-                <div class="list-left">
-                  <h3 class="list-left__title">That 70's House</h3>
-                  <p class="list-left__address">1234 Awesome St Nashville, TN 37098</p>
-                </div>
-                <div class="list-right">
-                  <p class="list-right__date">7:00pm - 10:00pm, 04/15/2017</p>
-                  <div  class="list-right__options">
-                    <button  class="btn btn--submit">Contact Host</button>
-                    <button class="btn btn--danger">Cancel</button>
-                  </div>
-                </div>
-              </li>
-
-              <li class="card__list__item">
-                <div class="list-left">
-                  <h3 class="list-left__title">That 70's House</h3>
-                  <p class="list-left__address">1234 Awesome St Nashville, TN 37098</p>
-                </div>
-                <div class="list-right">
-                  <p class="list-right__date">7:00pm - 10:00pm, 04/15/2017</p>
-                  <div  class="list-right__options">
-                    <button  class="btn btn--submit">Contact Host</button>
-                    <button class="btn btn--danger">Cancel</button>
-                  </div>
-                </div>
-              </li>
-
-            </ul>
-
-          </div>
-        </div>  {{!-- /.card --}}
-
-        {{!-- Previous Rehearsals --}}
-        <div class="card">
-          <div class="card__heading">
-            <h2>Previous Rehearsals</h2>
-          </div>
-
-          <div class="card__info">
-
-            <ul class="card__list">
-              <li class="card__list__item">
-                <div class="list-left">
-                  <h3 class="list-left__title">That 70's House</h3>
-                  <p class="list-left__address">1234 Awesome St Nashville, TN 37098</p>
-                </div>
-                <div class="list-right">
-                  <p class="list-right__date">7:00pm - 10:00pm, 04/15/2017</p>
-                  <div  class="list-right__options">
-                    <button  class="btn btn--submit">Contact Host</button>
-                  </div>
-                </div>
-              </li>
-              <li class="card__list__item">
-                <div class="list-left">
-                  <h3 class="list-left__title">That 70's House</h3>
-                  <p class="list-left__address">1234 Awesome St Nashville, TN 37098</p>
-                </div>
-                <div class="list-right">
-                  <p class="list-right__date">7:00pm - 10:00pm, 04/15/2017</p>
-                  <div  class="list-right__options">
-                    <button  class="btn btn--submit">Contact Host</button>
-                  </div>
-                </div>
-              </li>
-              <li class="card__list__item">
-                <div class="list-left">
-                  <h3 class="list-left__title">That 70's House</h3>
-                  <p class="list-left__address">1234 Awesome St Nashville, TN 37098</p>
-                </div>
-                <div class="list-right">
-                  <p class="list-right__date">7:00pm - 10:00pm, 04/15/2017</p>
-                  <div  class="list-right__options">
-                    <button  class="btn btn--submit">Contact Host</button>
-                  </div>
-                </div>
-              </li>
-
-
-
-            </ul>
-
-          </div>
-        </div>  {{!-- /.card --}}
-
-
+        {{outlet}}
       </div> {{!-- /.dashboard__content --}}
+
 
     </div> {{!-- /.dashboard --}}
   </div>
