@@ -13,7 +13,9 @@ Router.map(function () {
     this.route('detail', { path: '/:id' });
   });
 
-  this.route('user-dashboard');
+  this.route('user-dashboard', function () {
+    this.route('edit');
+  });
 });
 
 export default Router;
