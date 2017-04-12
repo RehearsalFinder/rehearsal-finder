@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import spaces from '../data';
 
 export default Ember.Route.extend({
   model() {
@@ -7,7 +6,7 @@ export default Ember.Route.extend({
   },
 
   // actions: {
-  //   error(err) {
+  //   error(err, transition) {
   //     this.replaceWith('user-dashboard');
   //   }
   // }
