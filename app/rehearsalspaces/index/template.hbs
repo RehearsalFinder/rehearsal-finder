@@ -6,11 +6,10 @@
         <div class="grid">
 
           {{#each model as |space|}}
-            {{#link-to 'rehearsalspaces.detail' space.id}}
-              {{#space-card name=space.name city=space.city state=space.state costPerHour=space.costPerHour}}{{/space-card}}
+            {{#link-to 'rehearsalspaces.detail' space.data.id}}
+              {{#space-card name=space.data.attributes.name location=space.data.attributes.location costPerHour=space.data.attributes.costPerHour}}{{/space-card}}
             {{/link-to}}
           {{/each}}
-
         </div>
       </div>
     </div>
