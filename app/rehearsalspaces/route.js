@@ -3,6 +3,6 @@ import spaces from '../data';
 
 export default Ember.Route.extend({
   model() {
-    return spaces;
+    return this.store.findAll('space');
   }
 });

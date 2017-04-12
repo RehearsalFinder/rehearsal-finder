@@ -21,8 +21,8 @@
       <div class="grid">
 
         {{#each model as |space| }}
-          {{#if space.data.attributes.featured}}
-            {{#space-card  name=space.data.attributes.name location=space.data.attributes.location costPerHour=space.data.attributes.costPerHour}}{{/space-card}}
+          {{#if space.featured}}
+            {{#space-card  name=space.name location=space.location costPerHour=space.costPerHour}}{{/space-card}}
           {{/if}}
         {{/each}}
 
