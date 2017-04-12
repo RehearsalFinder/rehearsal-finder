@@ -11,6 +11,8 @@ Router.map(function () {
   this.route('rehearsalspaces', function() {
     this.route('detail');
   });
+  this.route('login');
+  this.route('register');
 });
 
 export default Router;
