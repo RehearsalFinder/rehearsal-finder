@@ -1,6 +1,6 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('space', 'Unit | Model | space', {
+moduleForModel('rehearsalspaces', 'Unit | Model | rehearsalspaces', {
   // Specify the other units that are required for this test.
   needs: []
 });
