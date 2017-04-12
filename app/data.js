@@ -54,7 +54,7 @@ export default [
         spaceHostName: 'Dave Matthews',
         hostEmail: 'dave@matthews.com',
         hostPhone: '123-1234',
-        featured: 'yes',
+        featured: 0,
         description: 'This is a description of the space',
         rules: 'these are the rules of the space...'
       },

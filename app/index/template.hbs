@@ -19,10 +19,13 @@
 
       {{!-- ITS A GRID, BABY --}}
       <div class="grid">
-        {{#space-card}}{{/space-card}}
-        {{#space-card}}{{/space-card}}
-        {{#space-card}}{{/space-card}}
-        {{#space-card}}{{/space-card}}
+
+        {{#each model as |space| }}
+          {{#if space.data.attributes.featured}}
+            {{#space-card  name=space.data.attributes.name location=space.data.attributes.location costPerHour=space.data.attributes.costPerHour}}{{/space-card}}
+          {{/if}}
+        {{/each}}
+
       </div>
     </div>
   </div>
