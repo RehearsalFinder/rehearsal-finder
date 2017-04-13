@@ -2,7 +2,7 @@
   <div class="form">
     <h3 class="form__heading">Add a New Rehearsal Space</h3>
     {{!-- {{#with (changeset model validator) as |forms|}} --}}
-      <form {{action "saveUser" forms on="submit"}}>
+      <form {{action "createNewSpace" forms on="submit"}}>
         <p class="form__control">
           {{input value=forms.name placeholder="Space Name" type="text"}}
         </p>
@@ -39,7 +39,7 @@
         <p class="form__control">
           {{textarea value=forms.rules placeholder="Rules"}}
         </p>
-        <button class="btn btn--submit">Submit</button>
+        <button class="btn btn--submit" type="submit">Submit</button>
       </form>
       {{!-- {{#each forms.errors as |error|}}
         <ul>

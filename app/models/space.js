@@ -5,12 +5,12 @@ export default DS.Model.extend({
   location: DS.attr('string'),
   costPerHour: DS.attr('string'),
   squareFeet: DS.attr('string'),
-  // amenities: DS.attr('string'), hasMany
-  // availableEquipment: DS.attr('string'), hasMany
+  amenities: DS.attr('csv'),
+  availableEquipment: DS.attr('csv'),
   spaceHostName: DS.attr('string'),
   hostEmail: DS.attr('string'),
   hostPhone: DS.attr('string'),
-  featured: DS.attr('boolean'),
+  featured: DS.attr('string'),
   description: DS.attr('string'),
   rules: DS.attr('string'),
 });
