@@ -22,7 +22,9 @@
 
         {{#each model as |space| }}
           {{#if space.featured}}
-            {{#space-card  name=space.name location=space.location costPerHour=space.costPerHour}}{{/space-card}}
+            {{#link-to 'rehearsalspaces.detail' space.id}}
+              {{#space-card  name=space.name location=space.location costPerHour=space.costPerHour}}{{/space-card}}
+            {{/link-to}}
           {{/if}}
         {{/each}}
 

@@ -1,11 +1,19 @@
-{{outlet}}
 
 <div class="section">
   <div class="container">
-    <div class="grid">
-      {{#each model as |space|}}
-        {{#space-card  name=space.name location=space.location costPerHour=space.costPerHour}}{{/space-card}}
-      {{/each}}
-    </div>
+    <h1>Admin Panel</h1>
+
+    {{#link-to 'admin'}}
+      <button class="btn btn--submit">Admin Home</button>
+    {{/link-to}}
+
+    {{#link-to 'admin.new'}}
+      <button class="btn btn--submit">Add New Rehearsal Space</button>
+    {{/link-to}}
+
+    <button class="btn btn--submit"></button>
+
+
+    {{outlet}}
   </div>
 </div>
