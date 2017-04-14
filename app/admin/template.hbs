@@ -1,1 +1,11 @@
 {{outlet}}
+
+<div class="section">
+  <div class="container">
+    <div class="grid">
+      {{#each model as |space|}}
+        {{#space-card  name=space.name location=space.location costPerHour=space.costPerHour}}{{/space-card}}
+      {{/each}}
+    </div>
+  </div>
+</div>

@@ -16,7 +16,7 @@
   </div>
 
   <div class="page__right">
-    {{#leaflet-map lat=lat lng=lng zoom=zoom}}
+    {{#leaflet-map lat=lat lng=lng zoom=zoom scrollWheelZoom=false}}
       {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
 
       {{#marker-layer location=diamondSound}}

@@ -1,0 +1,5 @@
+{{outlet}}
+
+{{#each model as |space|}}
+  {{#space-card  name=space.name location=space.location costPerHour=space.costPerHour}}{{/space-card}}
+{{/each}}
