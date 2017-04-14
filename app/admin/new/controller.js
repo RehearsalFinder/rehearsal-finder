@@ -9,6 +9,7 @@ export default Ember.Controller.extend({
 
       space.save().then(() => {
         this.set('forms', {});
+        this.transitionToRoute('admin.index');
       });
     }
   }

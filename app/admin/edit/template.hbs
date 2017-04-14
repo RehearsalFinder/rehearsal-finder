@@ -2,7 +2,7 @@
   <div class="form">
     <h3 class="form__heading">Edit {{model.name}}</h3>
     {{!-- {{#with (changeset model validator) as |forms|}} --}}
-      <form {{action "createNewSpace" forms on="submit"}}>
+      <form {{action "updateSpace" forms on="submit"}}>
         <p class="form__control">
           {{input value=model.name placeholder="Space Name" type="text"}}
         </p>
