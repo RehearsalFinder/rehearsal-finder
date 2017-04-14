@@ -1,8 +1,10 @@
 <h3 class="section__heading">Current Rehearsal Spaces</h3>
 <div class="grid">
   {{#each model as |space|}}
-    {{#link-to 'admin.edit' space.id}}
-      {{#space-card  name=space.name location=space.location costPerHour=space.costPerHour}}{{/space-card}}
-    {{/link-to}}
+    <div class="grid__item">
+      {{#link-to 'admin.edit' space.id}}
+        {{#space-card  name=space.name location=space.location costPerHour=space.costPerHour}}{{/space-card}}
+      {{/link-to}}
+    </div>
   {{/each}}
 </div>

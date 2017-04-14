@@ -22,9 +22,11 @@
 
         {{#each model as |space| }}
           {{#if space.featured}}
-            {{#link-to 'rehearsalspaces.detail' space.id}}
-              {{#space-card  name=space.name location=space.location costPerHour=space.costPerHour}}{{/space-card}}
-            {{/link-to}}
+            <div class="grid__item">
+              {{#link-to 'rehearsalspaces.detail' space.id}}
+                {{#space-card  name=space.name location=space.location costPerHour=space.costPerHour}}{{/space-card}}
+              {{/link-to}}
+            </div>
           {{/if}}
         {{/each}}
 
