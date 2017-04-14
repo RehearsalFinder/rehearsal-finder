@@ -9,10 +9,7 @@ export default Ember.Controller.extend({
 
       space.save().then(() => {
         this.set('forms', {});
-        debugger;
       });
-
-      // debugger;
     }
   }
 
