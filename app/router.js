@@ -8,8 +8,13 @@ const Router = Ember.Router.extend({
 
 Router.map(function () {
   this;
-  this.route('rehearsalspaces', function() {
-    this.route('detail');
+
+  this.route('rehearsalspaces', function () {
+    this.route('detail', { path: '/:id' });
+  });
+
+  this.route('user-dashboard', function () {
+    this.route('edit');
   });
 });
 
