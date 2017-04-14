@@ -1,0 +1,51 @@
+<div class="card--form">
+  <div class="form">
+    <h3 class="form__heading">Add a New Rehearsal Space</h3>
+    {{!-- {{#with (changeset model validator) as |forms|}} --}}
+      <form {{action "createNewSpace" forms on="submit"}}>
+        <p class="form__control">
+          {{input value=forms.name placeholder="Space Name" type="text"}}
+        </p>
+        <p class="form__control">
+          {{input value=forms.location placeholder="Address" type="text"}}
+        </p>
+        <p class="form__control">
+          {{input value=forms.costPerHour placeholder="Cost Per Hour" type="text"}}
+        </p>
+        <p class="form__control">
+          {{input value=forms.squareFeet placeholder="Square Feet" type="text"}}
+        </p>
+        <p class="form__control">
+          {{input value=forms.amenities placeholder="Amenities" type="text"}}
+        </p>
+        <p class="form__control">
+          {{input value=forms.availableEquipment placeholder="Available Equipment" type="text"}}
+        </p>
+        <p class="form__control">
+          {{input value=forms.spaceHostName placeholder="Host Name" type="text"}}
+        </p>
+        <p class="form__control">
+          {{input value=forms.hostEmail placeholder="Host Email" type="text"}}
+        </p>
+        <p class="form__control">
+          {{input value=forms.hostPhone placeholder="Host Phone Number" type="text"}}
+        </p>
+        <p class="form__control">
+          {{input value=forms.featured placeholder="Featured?" type="text"}}
+        </p>
+        <p class="form__control">
+          {{textarea value=forms.description placeholder="Description"}}
+        </p>
+        <p class="form__control">
+          {{textarea value=forms.rules placeholder="Rules"}}
+        </p>
+        <button class="btn btn--submit" type="submit">Submit</button>
+      </form>
+      {{!-- {{#each forms.errors as |error|}}
+        <ul>
+          <li>{{error.key}}: {{error.validation}}</li>
+        </ul>
+      {{/each}}
+    {{/with}} --}}
+  </div>
+</div>
