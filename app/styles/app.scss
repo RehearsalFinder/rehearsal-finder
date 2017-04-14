@@ -51,19 +51,10 @@ $f-primary: sans-serif;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Working area
+
+.admin-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
