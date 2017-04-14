@@ -1,11 +1,14 @@
-
-// Detail route
+// DETAIL ROUTE
 .detail {
   display: flex;
   flex-wrap: wrap;
 
-  > * + * {
+
+  > * { // allows each section to span to full width when layout wraps
     flex-grow: 1;
+  }
+
+  > * + * { // adds uniform amount of margin between info and schedule
     margin-left: $m-gutter * 4;
   }
 
@@ -24,6 +27,7 @@
       }
     }
   }
+
 
   // BOOKING FORM
   &__schedule {
