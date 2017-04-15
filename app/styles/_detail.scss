@@ -2,14 +2,22 @@
 .detail {
   display: flex;
   flex-wrap: wrap;
+  margin-top: $m-gutter;
 
   > * { // allows each section to span to full width when layout wraps
     flex-grow: 1;
   }
 
   &__info {
-    // display: flex;
-    flex-basis: 70%;
+    flex-basis: 65%;
+
+    &--heading {
+      margin-bottom: $m-gutter * 1.5;
+
+      > * {
+        margin-top: 0;
+      }
+    }
 
     &--item {
       display: flex;
@@ -30,10 +38,17 @@
 
   // BOOKING FORM
   &__schedule {
-    flex-basis: calc(30% - #{$m-gutter * 4});
+    flex-basis: calc(35% - #{$m-gutter * 4});
     min-width: 10rem;
     margin-left: $m-gutter * 4;
+
   }
+}
+
+.date-form {
+  padding: $m-gutter;
+  background: $c-secondary;
+  box-shadow: $s-basic;
 }
 
 // Perks Section -- INFO

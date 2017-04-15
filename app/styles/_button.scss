@@ -31,4 +31,8 @@
     background: $c-danger;
     color: $c-secondary;
   }
+
+  &--is-full-width {
+    width: 100%;
+  }
 }

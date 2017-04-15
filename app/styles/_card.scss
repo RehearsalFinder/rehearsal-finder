@@ -2,6 +2,7 @@
 .card {
   box-shadow: $s-basic;
   width: 100%;
+  background: $c-secondary;
 
   &__heading { // for all cards with headings
     padding: $m-gutter;
