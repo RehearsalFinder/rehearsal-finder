@@ -30,13 +30,12 @@
           <p>{{model.rules}}</p>
         </div>
 
-        <div class="detail__info--perks">
-          <h3>Perks</h3>
+        <div class="detail__info--amenities">
+          <h3>Amenities</h3>
           <ul class="perks-list">
-            <li class="perks-list__item">Backline</li>
-            <li class="perks-list__item">Backline</li>
-            <li class="perks-list__item">Backline</li>
-            <li class="perks-list__item">Backline</li>
+            {{#each model.amenities as |item|}}
+              <li class="perks-list__item">{{item}}</li>
+            {{/each}}
           </ul>
         </div>
       </div>
