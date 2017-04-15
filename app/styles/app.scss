@@ -5,15 +5,18 @@ $c-grey: #aaa;
 $c-danger: red;
 
 // SHADOWS & BORDERS
-$s-basic: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$s-basic: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 $b-basic: 0.1rem solid $c-grey;
-
 
 // MEASUREMENTS
 $m-gutter: 1rem;
 
 // FONTS
 $f-primary: sans-serif;
+
+
+// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+// @import 'font-awesome';
 
 // BASE STYLE IMPORTS
 @import 'box-sizing'; // apply a natural box layout model to all elements, but allowing components to change
@@ -36,81 +39,22 @@ $f-primary: sans-serif;
   // Index
   @import 'hero'; // styles for hero section in '/'
 
+  // Rehearsal Spaces
+  @import 'spaces'; // styles for '/rehearsalspaces'
+  @import 'map'; // styles for leaflet map
 
+  // Rehersal Spaces - Detail
+  @import 'detail'; // styles for '/rehearsalspaces/detail'
 
-.wrapper {
-  padding-top: 4rem;
-}
-
-// User Dashboard Styles
-.dashboard {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: $m-gutter;
-
-  &__sidebar {
-    flex-basis: 25%;
-    flex-grow: 1;
-  }
-
-  &__content {
-    flex-basis: calc(75% - #{$m-gutter * 4});
-    flex-grow: 1;
-    margin-left: $m-gutter * 4;
-
-    > * + * {
-      margin-top: $m-gutter * 2;
-    }
-  }
-}
-
-
-
-
-
-
+  // User Dashboard
+  @import 'dashboard'; // styles for '/user-dashboard'
 
 
 
 // Working area
 
-// Detail route
-.detail {
+.admin-nav {
   display: flex;
-  flex-wrap: wrap;
-
-  > * + * {
-    flex-grow: 1;
-    margin-left: $m-gutter * 4;
-  }
-
-  &__info {
-    flex-basis: 70%;
-
-    > * + * {
-      display: flex;
-      align-items: flex-start;
-      border-top: $b-basic;
-      padding-bottom: $m-gutter * 4;
-
-
-      > * + * {
-        margin-left: $m-gutter * 4;
-      }
-    }
-  }
-
-  // BOOKING FORM
-  &__schedule {
-    flex-basis: calc(30% - #{$m-gutter * 4});
-
-  }
-}
-
-// Perks Section -- INFO
-.perks-list {
-  > * + * {
-    margin: $m-gutter 0;
-  }
+  justify-content: space-between;
+  align-items: center;
 }

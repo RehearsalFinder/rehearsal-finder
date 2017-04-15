@@ -1,6 +1,7 @@
 // TOP NAV
 .section--top-nav {
   position: fixed;
+  z-index: 10;
   width: 100%;
   height: 4rem;
   display: flex;
@@ -15,9 +16,25 @@
   justify-content: center;
   align-items: center;
 
+  &__item {
+    margin: 0;
+  }
+
   > * + * {
     margin-left: $m-gutter;
+
   }
+
+  &__button {
+    background: transparent;
+    color: $c-secondary;
+    border: none;
+    font-size: 1rem;
+  }
+}
+
+.logo {
+  margin: 0;
 }
 
 .logo {

@@ -1,0 +1,38 @@
+{{!-- REHEARSAL SPACES LIST ROUTE --}}
+<div class="page">
+  <div class="page__left">
+    <div class="section section--spaces">
+      <div class="container">
+        <div class="grid">
+
+          {{#each model as |space|}}
+            <div class="grid__item">
+              {{#link-to 'rehearsalspaces.detail' space.id}}
+                {{#space-card name=space.name location=space.location costPerHour=space.costPerHour}}{{/space-card}}
+              {{/link-to}}
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page__right">
+    {{#leaflet-map lat=lat lng=lng zoom=zoom scrollWheelZoom=false}}
+      {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+
+      {{#marker-layer location=diamondSound}}
+        {{#popup-layer}}
+          <h3>Diamond Sound Studios</h3>
+        {{/popup-layer}}
+      {{/marker-layer}}
+
+      {{#marker-layer location=inkBuilding}}
+        {{#popup-layer}}
+          <h3>Ink Building</h3>
+        {{/popup-layer}}
+      {{/marker-layer}}
+
+    {{/leaflet-map}}
+  </div>
+</div>

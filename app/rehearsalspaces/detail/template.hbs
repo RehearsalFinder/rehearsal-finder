@@ -16,18 +16,18 @@
       {{!-- Info --}}
       <div class="detail__info">
         <div class="detail__info--heading">
-          <h2>Space Name</h2>
-          <h4>Area - Location</h4>
+          <h2>{{model.name}}</h2>
+          <h4>{{model.location}}</h4>
         </div>
 
         <div class="detail__info--space">
           <h3>The Space</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ad eos praesentium aperiam, maiores sed aliquam repudiandae. Ullam, atque doloremque perspiciatis dolor quia. Distinctio, illo. Quasi blanditiis ipsam eaque, harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ad eos praesentium aperiam, maiores sed aliquam repudiandae. Ullam, atque doloremque perspiciatis dolor quia. Distinctio, illo. Quasi blanditiis ipsam eaque, harum.</p>
+          <p>{{model.description}}</p>
         </div>
 
-        <div class=" detail__info--rules">
+        <div class="detail__info--rules">
           <h3>Rules</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ad eos praesentium aperiam, maiores sed aliquam repudiandae. Ullam, atque doloremque perspiciatis dolor quia. Distinctio, illo. Quasi blanditiis ipsam eaque, harum.</p>
+          <p>{{model.rules}}</p>
         </div>
 
         <div class="detail__info--perks">
@@ -44,7 +44,7 @@
       {{!-- Schedule --}}
       <div class="detail__schedule">
         <form class="form date-form">
-          <h2 class="form__heading form__heading--left">Book it for $25/hr</h2>
+          <h2 class="form__heading form__heading--left">Book it for ${{model.costPerHour}}/hr</h2>
           <p class="form__control">
             {{input name="date" class="form__control date__control" type="date"}}
           </p>
