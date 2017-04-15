@@ -48,6 +48,19 @@
           <p>{{model.rules}}</p>
         </div>
 
+        <div class="detail__info--item">
+          <h3>The Host</h3>
+          <ul class="perks-list">
+            <li  class="perks-list__item">{{model.spaceHostName}}</li>
+            <li  class="perks-list__item">
+              Email: <a href="mailto:{{model.hostEmail}}">{{model.hostEmail}}</a>
+            </li>
+            <li  class="perks-list__item">
+              Phone: <a href="tel:{{model.hostPhone}}">{{model.hostPhone}}</a>
+            </li>
+          </ul>
+        </div>
+
       </div>
 
       {{!-- Schedule --}}

@@ -41,7 +41,6 @@
     flex-basis: calc(35% - #{$m-gutter * 4});
     min-width: 10rem;
     margin-left: $m-gutter * 4;
-
   }
 }
 
@@ -56,7 +55,14 @@
   > * + * {
     margin: $m-gutter 0;
   }
+
+  &__item {
+    > a {
+      color: $c-grey;
+    }
+  }
 }
+
 
 
 @media (max-width: 750px) {
