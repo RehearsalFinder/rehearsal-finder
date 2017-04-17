@@ -4,7 +4,7 @@
     {{#link-to 'index' class="nav-list__item"}}Home{{/link-to}}
     {{#link-to 'rehearsalspaces' class="nav-list__item"}}Spaces{{/link-to}}
     {{#if session.isAuthenticated}}
-      {{#link-to 'user-dashboard' class="nav-list__item"}}User Dashboard{{/link-to}}
+      {{#link-to 'user-dashboard'  class="nav-list__item"}}User Dashboard{{/link-to}}
       <button class="btn btn--danger nav-list__item" {{action "logout"}}>Logout</button>
       {{else}}
       {{#link-to 'login' class="btn nav-list__item"}}Login{{/link-to}}
