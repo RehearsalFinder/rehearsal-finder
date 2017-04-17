@@ -1,0 +1,48 @@
+// Rehearsal Spaces page layout
+.section--spaces {
+  padding: $m-gutter * 2;
+}
+.page {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &__left {
+    position: relative;
+    flex-basis: 40%;
+  }
+
+  &__right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-basis: 60%;
+    width: 60%;
+    height: 100vh;
+    background: blue;
+  }
+}
+
+@media (max-width: 900px) {
+  .page {
+    flex-direction: column-reverse;
+
+    &__left {
+      top: 35vh;
+      left: 0;
+      flex-basis: 100%;
+
+    }
+
+    &__right {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      height: 35vh;
+      width: 100%;
+      margin-bottom: $m-gutter;
+    }
+
+  }
+}

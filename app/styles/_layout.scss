@@ -1,4 +1,9 @@
 // Layout
+
+.wrapper { // moves content down below fixed navbar
+  padding-top: 4rem;
+}
+
 .section {
   padding: $m-gutter;
 

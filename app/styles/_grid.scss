@@ -7,8 +7,8 @@
 
   &__item {
     flex-basis: calc(100% / 2 - #{$m-gutter} - #{$m-gutter});
+    min-width: 20rem;
     flex-grow: 1;
-    min-width: 23rem;
     margin: $m-gutter;
   }
 }
