@@ -2,43 +2,92 @@
 .detail {
   display: flex;
   flex-wrap: wrap;
-
+  margin-top: $m-gutter;
 
   > * { // allows each section to span to full width when layout wraps
     flex-grow: 1;
   }
 
-  > * + * { // adds uniform amount of margin between info and schedule
-    margin-left: $m-gutter * 4;
-  }
-
   &__info {
-    flex-basis: 70%;
+    flex-basis: 65%;
 
-    > * + * {
+    &--heading {
+      margin-bottom: $m-gutter * 1.5;
+
+      > * {
+        margin-top: 0;
+      }
+    }
+
+    &--item {
       display: flex;
-      align-items: flex-start;
       border-top: $b-basic;
       padding-bottom: $m-gutter * 4;
 
+      > *:nth-child(1) { // selects info section title
+        flex-basis: 15%;
+        margin-bottom: 0;
 
-      > * + * {
-        margin-left: $m-gutter * 4;
+      }
+
+      > * + * { // selects actual info
+        flex-basis: 85%;
+        margin: $m-gutter 0 0 ($m-gutter * 2);
       }
     }
   }
 
-
   // BOOKING FORM
   &__schedule {
-    flex-basis: calc(30% - #{$m-gutter * 4});
-
+    flex-basis: calc(35% - #{$m-gutter * 2});
+    min-width: 10rem;
+    margin-left: $m-gutter * 2;
   }
+}
+
+.date-form {
+  padding: $m-gutter;
+  background: $c-secondary;
+  box-shadow: $s-basic;
+}
+
+.date_control {
+  border: $b-basic;
 }
 
 // Perks Section -- INFO
 .perks-list {
   > * + * {
-    margin: $m-gutter 0;
+    margin: $m-gutter 0 0;
+  }
+
+  &__item {
+    > a {
+      color: $c-grey;
+    }
+  }
+}
+
+
+
+@media (max-width: 750px) {
+  .detail {
+    flex-direction: column;
+
+    &__info {
+      &--item {
+        flex-direction: column;
+
+        > * + * {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__schedule {
+      // margin-left: 0;
+      width: 100%;
+      margin: 0 auto;
+    }
   }
 }

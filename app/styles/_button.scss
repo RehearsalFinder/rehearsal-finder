@@ -26,4 +26,13 @@
     background: $c-primary;
     color: $c-secondary;
   }
+
+  &--danger {
+    background: $c-danger;
+    color: $c-secondary;
+  }
+
+  &--is-full-width {
+    width: 100%;
+  }
 }

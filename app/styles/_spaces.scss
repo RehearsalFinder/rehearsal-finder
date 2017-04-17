@@ -2,6 +2,7 @@
 .section--spaces {
   padding: $m-gutter * 2;
 }
+
 .page {
   display: flex;
   justify-content: space-between;
@@ -14,16 +15,20 @@
 
   &__right {
     position: fixed;
-    top: 0;
+    top: 4rem;
     right: 0;
     flex-basis: 60%;
     width: 60%;
     height: 100vh;
-    background: blue;
   }
 }
 
 @media (max-width: 900px) {
+
+  .section--spaces {
+    padding: $m-gutter;
+  }
+
   .page {
     flex-direction: column-reverse;
 
@@ -36,13 +41,12 @@
 
     &__right {
       position: fixed;
-      top: 0;
+      top: 4rem;
       left: 0;
       z-index: 1;
       height: 35vh;
       width: 100%;
       margin-bottom: $m-gutter;
     }
-
   }
 }
