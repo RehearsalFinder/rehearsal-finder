@@ -3,7 +3,7 @@
   background: url('http://www.sir-usa.com/location/los-angeles/photos-stage-5/5.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 40rem;
+  height: calc(100vh - 4rem); // header is 4rem
   display: flex;
   justify-content: center;
   align-items: center;

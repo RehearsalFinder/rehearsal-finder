@@ -26,6 +26,7 @@
 
       > *:nth-child(1) { // selects info section title
         flex-basis: 15%;
+        margin-bottom: 0;
 
       }
 
@@ -38,9 +39,9 @@
 
   // BOOKING FORM
   &__schedule {
-    flex-basis: calc(35% - #{$m-gutter * 4});
+    flex-basis: calc(35% - #{$m-gutter * 2});
     min-width: 10rem;
-    margin-left: $m-gutter * 4;
+    margin-left: $m-gutter * 2;
   }
 }
 
@@ -48,6 +49,10 @@
   padding: $m-gutter;
   background: $c-secondary;
   box-shadow: $s-basic;
+}
+
+.date_control {
+  border: $b-basic;
 }
 
 // Perks Section -- INFO
