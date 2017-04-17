@@ -14,9 +14,8 @@ $m-gutter: 1rem;
 // FONTS
 $f-primary: sans-serif;
 
-
-// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-// @import 'font-awesome';
+// THIRD PARTY IMPORTS
+// @import "font-awesome";
 
 // BASE STYLE IMPORTS
 @import 'box-sizing'; // apply a natural box layout model to all elements, but allowing components to change
@@ -45,6 +44,7 @@ $f-primary: sans-serif;
 
   // Rehersal Spaces - Detail
   @import 'detail'; // styles for '/rehearsalspaces/detail'
+  @import 'slider'; // styles to make a cool photo slider
 
   // User Dashboard
   @import 'dashboard'; // styles for '/user-dashboard'

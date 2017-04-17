@@ -14,12 +14,14 @@
       {{/carousel-item}}
     {{/carousel-body}}
 
-    {{#carousel-arrow class="arrow-left" direction="left" tagName="button" }}
-      Slide Left
+    {{#carousel-arrow class="control control-left" direction="left" tag="div" }}
+      <div class="control__icon control__icon--left">{{fa-icon "arrow-left" tagName="span"}}</div>
     {{/carousel-arrow}}
-    {{#carousel-arrow class="arrow-right" direction="right" tagName="button" }}
-      Slide Right
+
+    {{#carousel-arrow class="control control-right" direction="right" tagName="div" }}
+      <div class="control__icon control__icon--right">{{fa-icon "arrow-right" tagName="span"}}</div>
     {{/carousel-arrow}}
+
   {{/carousel-container}}
 </div>
 

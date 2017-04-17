@@ -11,6 +11,10 @@ module.exports = function (defaults) {
       includePolyfill: true
     },
 
+    'ember-font-awesome': {
+      useScss: true, // for ember-cli-sass
+    },
+
     // Add options here
     fingerprint: {
       exclude: [
