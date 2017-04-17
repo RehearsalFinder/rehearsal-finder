@@ -3,6 +3,13 @@
 <div class="card--form">
   <div class="form">
     <h3 class="form__heading">Login</h3>
+    {{#if errorMessage}}
+      <p>
+        <strong>Login failed! Try again</strong>
+        <code>{{errorMessage}}</code>
+      </p>
+    {{/if}}
+
     {{#with (changeset model validator) as |forms|}}
       <form {{action "loginUser" forms on="submit"}}>
         <p class="form__control">

@@ -1,14 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  isShowingModal: false,
+  session: Ember.inject.service('session'),
+
   actions: {
-    toggleLoginModal() {
-      this.toggleProperty('isShowingLoginModal');
-    },
-    toggleSignUpModal() {
-      this.toggleProperty('isShowingSignupModal');
-    },
     async loginUser(changeset) {
       await changeset.validate();
 
@@ -23,5 +18,9 @@ export default Ember.Controller.extend({
         password: this.get('model.password'),
       });
     },
+    logout() {
+      this.get('session').invalidate();
+      this.transitionToRoute('index');
+    }
   }
 });

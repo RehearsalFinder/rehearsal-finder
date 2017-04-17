@@ -10,5 +10,11 @@
       <p class="form__control">{{input type="text" placeholder="Password"}}</p>
       <button class="btn btn--submit">Submit</button>
     </form>
+    {{#if errorMessage}}
+      <p>
+        <strong>Login failed! Try again</strong>
+        <code>{{errorMessage}}</code>
+      </p>
+    {{/if}}
   </div>
 </div>
