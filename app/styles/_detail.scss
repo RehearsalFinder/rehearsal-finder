@@ -31,7 +31,7 @@
 
       > * + * { // selects actual info
         flex-basis: 85%;
-        margin-left: $m-gutter * 2;
+        margin: $m-gutter 0 0 ($m-gutter * 2);
       }
     }
   }
@@ -53,7 +53,7 @@
 // Perks Section -- INFO
 .perks-list {
   > * + * {
-    margin: $m-gutter 0;
+    margin: $m-gutter 0 0;
   }
 
   &__item {
@@ -69,11 +69,20 @@
   .detail {
     flex-direction: column;
 
+    &__info {
+      &--item {
+        flex-direction: column;
+
+        > * + * {
+          margin-left: 0;
+        }
+      }
+    }
+
     &__schedule {
       // margin-left: 0;
       width: 100%;
       margin: 0 auto;
     }
-
   }
 }
