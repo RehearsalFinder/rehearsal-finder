@@ -17,7 +17,7 @@ export default Ember.Controller.extend({
 
       await user.save();
 
-      this.transitionToRoute('user-dashboard');
+      this.transitionToRoute('login');
     },
   }
 });
