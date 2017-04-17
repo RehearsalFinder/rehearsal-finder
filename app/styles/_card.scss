@@ -30,6 +30,7 @@
   &__info { // for all .card__info styles
     padding: $m-gutter;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
     &__left > * {

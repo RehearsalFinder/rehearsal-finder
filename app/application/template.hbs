@@ -4,8 +4,8 @@
 
     {{#link-to 'index' class="nav-list__item"}}Home{{/link-to}}
     {{#link-to 'rehearsalspaces' class="nav-list__item"}}Spaces{{/link-to}}
-    {{#link-to 'login' class="nav-list__item"}}Login{{/link-to}}
-    {{#link-to 'register' class="nav-list__item"}}Sign Up{{/link-to}}
+    {{#link-to 'login' class="btn nav-list__item"}}Login{{/link-to}}
+    {{#link-to 'register' class="btn nav-list__item"}}Sign Up{{/link-to}}
     {{#if session.isAuthenticated}}
       <button {{action "logout"}}>Logout</button>
     {{/if}}
