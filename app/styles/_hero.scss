@@ -27,9 +27,10 @@
   position: relative;
 
   &__image {
-    object-fit: fill;
-    height: 100%;
-    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 100vh;
+    width: 100vw;
   }
 }
 
@@ -39,11 +40,6 @@
   width: 100vw;
 }
 
-.carousel-body {
-  // position: relative;
-  // height: calc(100vh - 4rem); // header is 4rem
-  // width: 100vw;
-}
 
 .arrow {
   &-left {
