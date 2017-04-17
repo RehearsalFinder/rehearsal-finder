@@ -4,9 +4,11 @@
 
     {{#link-to 'index' class="nav-list__item"}}Home{{/link-to}}
     {{#link-to 'rehearsalspaces' class="nav-list__item"}}Spaces{{/link-to}}
-    <button {{action "toggleLoginModal"}} class="nav-list__item btn">Login</button>
-    <button {{action "toggleSignUpModal"}} class="nav-list__item btn">Sign Up</button>
-
+    {{#link-to 'login' class="nav-list__item"}}Login{{/link-to}}
+    {{#link-to 'register' class="nav-list__item"}}Sign Up{{/link-to}}
+    {{#if session.isAuthenticated}}
+      <button {{action "logout"}}>Logout</button>
+    {{/if}}
   </div>
 </div>
 
@@ -14,20 +16,7 @@
   {{liquid-outlet}}
 </div>
 
-{{#if isShowingLoginModal}}
-  {{#modal-dialog close="toggleLoginModal"
-                  targetAttachment="center"
-                  translucentOverlay=true}}
-    {{#login-form class="modal"}}{{/login-form}}
-  {{/modal-dialog}}
 
-{{else if isShowingSignupModal}}
-  {{#modal-dialog close="toggleSignUpModal"
-                  targetAttachment="center"
-                  translucentOverlay=true}}
-    {{#signup-form class="modal"}}{{/signup-form}}
-  {{/modal-dialog}}
-{{/if}}
 
 {{#if isShowingLoginModal}}
   {{#modal-dialog close="toggleLoginModal"
