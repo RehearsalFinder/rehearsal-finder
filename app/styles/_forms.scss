@@ -1,15 +1,15 @@
 // FORMS
 
- // Sign-Up / Login Form
+// Sign-Up / Login Form
 .card--form {
-  padding: $m-gutter;
   max-width: 40rem;
   margin: 0 auto;
+  padding: $m-gutter;
 }
 
 .form {
-  margin: 0 auto;
   width: 100%;
+  margin: 0 auto;
   // max-width: 25rem;
 
   &__heading {

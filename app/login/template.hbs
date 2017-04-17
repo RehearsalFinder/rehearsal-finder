@@ -1,0 +1,32 @@
+{{outlet}}
+
+<div class="card--form">
+  <div class="form">
+    <h3 class="form__heading">Login</h3>
+    {{#if errorMessage}}
+      <p>
+        <strong>Login failed! Try again</strong>
+        <code>{{errorMessage}}</code>
+      </p>
+    {{/if}}
+
+    {{#with (changeset model validator) as |forms|}}
+      <form {{action "loginUser" forms on="submit"}}>
+        <p class="form__control">
+          {{input type="text" value=forms.email placeholder="Email"}}
+        </p>
+        <p class="form__control">
+          {{input type="password" value=forms.password placeholder="Password"}}
+        </p>
+        <button class="btn btn--submit">Submit</button>
+      </form>
+      {{#each forms.errors as |error|}}
+        <ul>
+          <li>{{error.key}}: {{error.validation}}</li>
+        </ul>
+      {{/each}}
+    {{/with}}
+
+
+  </div>
+</div>

@@ -29,15 +29,15 @@ $f-primary: sans-serif;
 // COMPONENT STYLE IMPORTS
 @import 'card'; // Base card styles for information
 @import 'forms'; // Base form styles for use inside of cards
-@import "ember-modal-dialog/ember-modal-structure"; // Stylings for Ember Modal Dialog
-@import "ember-modal-dialog/ember-modal-appearance"; // Stylings for Ember Modal Dialog
+@import 'ember-modal-dialog/ember-modal-structure'; // Stylings for Ember Modal Dialog
+@import 'ember-modal-dialog/ember-modal-appearance'; // Stylings for Ember Modal Dialog
 
 // PAGE SPECIFIC STYLES
-  // Application
-  @import 'top-nav'; // styles for top navigation located in 'application route'
+// Application
+@import 'top-nav'; // styles for top navigation located in 'application route'
 
-  // Index
-  @import 'hero'; // styles for hero section in '/'
+// Index
+@import 'hero'; // styles for hero section in '/'
 
   // Rehearsal Spaces
   @import 'spaces'; // styles for '/rehearsalspaces'
@@ -55,6 +55,41 @@ $f-primary: sans-serif;
 
 .admin-nav {
   display: flex;
+  flex-wrap: wrap;
+
+  > * + * {
+    flex-grow: 1;
+    margin-left: $m-gutter * 4;
+  }
+
+  &__info {
+    flex-basis: 70%;
+
+    > * + * {
+      display: flex;
+      align-items: flex-start;
+      padding-bottom: $m-gutter * 4;
+      border-top: $b-basic;
+
+      > * + * {
+        margin-left: $m-gutter * 4;
+      }
+    }
+  }
+
+  // BOOKING FORM
+  &__schedule {
+    flex-basis: calc(30% - #{$m-gutter * 4});
+
+  }
+}
+
+// Perks Section -- INFO
+.perks-list {
   justify-content: space-between;
   align-items: center;
+
+  > * + * {
+    margin: $m-gutter 0;
+  }
 }
