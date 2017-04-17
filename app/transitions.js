@@ -3,15 +3,15 @@ export default function () {
   this.transition(
     this.fromRoute('index'),
     this.toRoute('rehearsalspaces'),
-    this.use('toLeft'),
-    this.reverse('toRight')
+    this.use('toFixL'),
+    this.reverse('toFixR')
   );
 
   // List
   this.transition(
     this.fromRoute('rehearsalspaces.index'),
     this.toRoute('rehearsalspaces.detail'),
-    this.use('toLeft'),
-    this.reverse('toRight')
+    this.use('toFixL'),
+    this.reverse('toFixR')
   );
 }
