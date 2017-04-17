@@ -1,11 +1,26 @@
 {{!-- REHEARSAL SPACE DETAIL ROUTE --}}
 {{!-- Hero / Slider --}}
-<div class="section section--hero">
-  <div class="container">
-    <div class="hero slider">
-      {{!-- This is gonna be an image carousel or something slidey with different pics! --}}
-    </div>
-  </div>
+<div class="section section--hero slider">
+  {{#carousel-container transitionInterval=400}}
+    {{#carousel-body}}
+      {{#carousel-item}}
+        Emberjs
+      {{/carousel-item}}
+      {{#carousel-item}}
+        Reactjs
+      {{/carousel-item}}
+      {{#carousel-item}}
+        <img class="slider__image" src="http://www.sir-usa.com/location/los-angeles/photos-stage-5/5.jpg">
+      {{/carousel-item}}
+    {{/carousel-body}}
+
+    {{#carousel-arrow class="arrow-left" direction="left" tagName="button" }}
+      Slide Left
+    {{/carousel-arrow}}
+    {{#carousel-arrow class="arrow-right" direction="right" tagName="button" }}
+      Slide Right
+    {{/carousel-arrow}}
+  {{/carousel-container}}
 </div>
 
 {{!-- Detail --}}
@@ -51,11 +66,11 @@
         <div class="detail__info--item">
           <h3>The Host</h3>
           <ul class="perks-list">
-            <li  class="perks-list__item">{{model.spaceHostName}}</li>
-            <li  class="perks-list__item">
+            <li class="perks-list__item">{{model.spaceHostName}}</li>
+            <li class="perks-list__item">
               Email: <a href="mailto:{{model.hostEmail}}">{{model.hostEmail}}</a>
             </li>
-            <li  class="perks-list__item">
+            <li class="perks-list__item">
               Phone: <a href="tel:{{model.hostPhone}}">{{model.hostPhone}}</a>
             </li>
           </ul>

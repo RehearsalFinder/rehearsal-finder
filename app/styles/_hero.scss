@@ -1,6 +1,6 @@
 // HERO styles
 .section--hero {
-  background: url('http://www.sir-usa.com/location/los-angeles/photos-stage-5/5.jpg');
+  background: red;;
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vh - 4rem); // header is 4rem
@@ -8,9 +8,6 @@
   align-items: center;
   justify-content: center;
   height: 40rem;
-  background: url('http://www.sir-usa.com/location/los-angeles/photos-stage-5/5.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
   color: $c-secondary;
   box-shadow: $s-basic;
 }
@@ -18,5 +15,46 @@
 .hero {
   &__message {
     text-align: center;
+  }
+}
+
+.slider {
+  padding: 0;
+  height: calc(100vh - 4rem); // header is 4rem
+  width: 100vw;
+  background: green;
+  overflow: hidden;
+  position: relative;
+
+  &__image {
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.carousel-container {
+  position: relative;
+  height: calc(100vh - 4rem); // header is 4rem
+  width: 100vw;
+}
+
+.carousel-body {
+  // position: relative;
+  // height: calc(100vh - 4rem); // header is 4rem
+  // width: 100vw;
+}
+
+.arrow {
+  &-left {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+  }
+
+  &-right {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
   }
 }
