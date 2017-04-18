@@ -35,4 +35,16 @@
   &--is-full-width {
     width: 100%;
   }
+
+  &--avail {
+    background: $c-true;
+    color: $c-secondary;
+    margin-bottom: $m-gutter / 2;
+  }
+
+  &--unavail {
+    background: $c-false;
+    color: $c-secondary;
+    margin-bottom: $m-gutter / 2;
+  }
 }
