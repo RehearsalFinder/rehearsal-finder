@@ -1,17 +1,19 @@
 import Ember from 'ember';
+const { inject: { service }, Component } = Ember;
 
 export default Ember.Controller.extend({
-  forms: {},
+  session: Ember.inject.service(),
+  currentUser: service('current-user'),
 
   actions: {
-    createNewSpace() {
-      const space = this.store.createRecord('space', this.forms);
+    async createNewSpace(changeset) {
+      await changeset.save();
 
-      space.save().then(() => {
-        this.set('forms', {});
-        this.transitionToRoute('admin.index');
-      });
+      const space = this.store.createRecord('space', this.model);
+
+      await space.save();
+
+      this.transitionToRoute('admin.index');
     }
   }
-
 });

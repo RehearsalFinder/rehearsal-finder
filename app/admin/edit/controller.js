@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
     },
 
     deleteSpace() {
-      const space = this.model.destroyRecord().then(() => {
+      this.model.destroyRecord().then(() => {
         this.transitionToRoute('admin.index');
       });
     }
