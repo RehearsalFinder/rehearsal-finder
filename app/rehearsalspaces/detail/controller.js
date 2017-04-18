@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
 
   actions: {
     toggleAvail() {
+      // toggle class of time button
     },
   }
-
 });
