@@ -51,11 +51,11 @@
         <div class="detail__info--item">
           <h3>The Host</h3>
           <ul class="perks-list">
-            <li  class="perks-list__item">{{model.spaceHostName}}</li>
-            <li  class="perks-list__item">
+            <li class="perks-list__item">{{model.spaceHostName}}</li>
+            <li class="perks-list__item">
               Email: <a href="mailto:{{model.hostEmail}}">{{model.hostEmail}}</a>
             </li>
-            <li  class="perks-list__item">
+            <li class="perks-list__item">
               Phone: <a href="tel:{{model.hostPhone}}">{{model.hostPhone}}</a>
             </li>
           </ul>
@@ -67,43 +67,57 @@
       <div class="detail__schedule">
         <form class="form date-form">
           <h2 class="form__heading form__heading--left">Book it for ${{model.costPerHour}}/hr</h2>
-          <p class="form__control">
-            {{input name="date" class="form__control date__control" type="date"}}
-          </p>
 
+          {{#if session.isAuthenticated}}
+            <p class="form__control">
+              {{input name="date" class="form__control date__control" type="date"}}
+            </p>
 
-          <p class="form__control">
-            <label class="date-form__label" for="time">
-              {{input name="time" type="checkbox" class="date-form__time"}}
-              <span>7:00pm</span>
-            </label>
-          </p>
-          <p class="form__control">
-            <label class="date-form__label" for="time">
-              {{input name="time" type="checkbox" class="date-form__time"}}
-              <span>7:00pm</span>
-            </label>
-          </p>
-          <p class="form__control">
-            <label class="date-form__label" for="time">
-              {{input name="time" type="checkbox" class="date-form__time"}}
-              <span>7:00pm</span>
-            </label>
-          </p>
-          <p class="form__control">
-            <label class="date-form__label" for="time">
-              {{input name="time" type="checkbox" class="date-form__time"}}
-              <span>7:00pm</span>
-            </label>
-          </p>
-          <p class="form__control">
-            <label class="date-form__label" for="time">
-              {{input name="time" type="checkbox" class="date-form__time"}}
-              <span>7:00pm</span>
-            </label>
-          </p>
+            <p class="form__control">
+              <label class="date-form__label" for="time">
+                {{input name="time" type="checkbox" class="date-form__time"}}
+                <span>7:00pm</span>
+              </label>
+            </p>
+            <p class="form__control">
+              <label class="date-form__label" for="time">
+                {{input name="time" type="checkbox" class="date-form__time"}}
+                <span>7:00pm</span>
+              </label>
+            </p>
+            <p class="form__control">
+              <label class="date-form__label" for="time">
+                {{input name="time" type="checkbox" class="date-form__time"}}
+                <span>7:00pm</span>
+              </label>
+            </p>
+            <p class="form__control">
+              <label class="date-form__label" for="time">
+                {{input name="time" type="checkbox" class="date-form__time"}}
+                <span>7:00pm</span>
+              </label>
+            </p>
+            <p class="form__control">
+              <label class="date-form__label" for="time">
+                {{input name="time" type="checkbox" class="date-form__time"}}
+                <span>7:00pm</span>
+              </label>
+            </p>
 
-          <button class="btn btn--submit btn--is-full-width" type="submit">Book It!</button>
+            <button class="btn btn--submit btn--is-full-width" type="submit">Book It!</button>
+
+          {{else}}
+            <div>
+              <p>
+                {{#link-to 'register' class="btn btn--submit" }}Sign Up{{/link-to}}
+              </p>
+              or
+              <p>
+                {{#link-to 'login' class="btn btn--submit" }}Login{{/link-to}}
+              </p>
+              <p>in to book a rehearsal space.</p>
+            </div>
+          {{/if}}
         </form>
       </div>
     </div>
