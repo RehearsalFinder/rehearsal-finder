@@ -43,8 +43,9 @@
   }
 
   &--unavail {
-    background: $c-false;
-    color: $c-secondary;
+    text-decoration: line-through;
+    background: $c-grey;
+    color: $c-false;
     margin-bottom: $m-gutter / 2;
   }
 }
