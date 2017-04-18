@@ -61,6 +61,10 @@ $f-primary: sans-serif;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: ($m-gutter / 2) $m-gutter;
+  box-shadow: $s-basic;
+  // background: $c-grey;
+
 }
 
 

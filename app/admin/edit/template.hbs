@@ -1,75 +1,13 @@
-<div class="card--form">
-  <div class="form">
-    <h3 class="form__heading">Edit {{model.name}}</h3>
-    {{!-- {{#with (changeset model validator) as |forms|}} --}}
-    <form {{action "updateSpace" forms on="submit"}}>
-      <p class="form__control">
-        <label>Name</label>
-        {{input value=model.name placeholder="Space Name" type="text"}}
-      </p>
-      <p class="form__control">
-        <label>Street Address</label>
-        {{input value=model.streetAddress placeholder="Street Address" type="text"}}
-      </p>
-      <p class="form__control">
-        <label>City</label>
-        {{input value=model.city placeholder="City" type="text"}}
-      </p>
-      <p class="form__control">
-        <label>State</label>
-        {{input value=model.state placeholder="State" type="text"}}
-      </p>
-      <p class="form__control">
-        <label>Cost Per Hour</label>
-        {{input value=model.costPerHour placeholder="Cost Per Hour" type="text"}}
-      </p>
-      <p class="form__control">
-        <label>Square Feet</label>
-        {{input value=model.squareFeet placeholder="Square Feet" type="text"}}
-      </p>
-      <p class="form__control">
-        <label>Amenities</label>
-        {{input value=model.amenities placeholder="Amenities" type="text"}}
-      </p>
-      <p class="form__control">
-        <label>Available Equipment</label>
-        {{input value=model.availableEquipment placeholder="Available Equipment" type="text"}}
-      </p>
-      <p class="form__control">
-        <label>Host Name</label>
-        {{input value=model.spaceHostName placeholder="Host Name" type="text"}}
-      </p>
-      <p class="form__control">
-        <label>Host Email</label>
-        {{input value=model.hostEmail placeholder="Host Email" type="text"}}
-      </p>
-      <p class="form__control">
-        <label>Host Phone</label>
-        {{input value=model.hostPhone placeholder="Host Phone Number" type="text"}}
-      </p>
-      <p class="form__control">
-        <label>Featured</label>
-        {{input value=model.featured placeholder="Featured?" type="text"}}
-      </p>
-      <p class="form__control">
-        <label>Description</label>
-        {{textarea value=model.description placeholder="Description"}}
-      </p>
-      <p class="form__control">
-        <label>Rules</label>
-        {{textarea value=model.rules placeholder="Rules"}}
-      </p>
-      <button class="btn btn--submit" type="submit">Submit</button>
-    </form>
-    {{!-- {{/with}} --}}
-  </div>
+<h3 class="form__heading">Edit {{model.name}}</h3>
 
-  <div class="card--form">
-    <div class="form">
-      <h2 class="section__heading" >Delete Rehearsal Space</h2>
-      <button class="btn btn--danger" {{action "deleteSpace"}}><span class="fa fa-times"></span>Delete Permanently Forever . . .</button>
-    </div>
-  </div>
+{{#link-to 'admin.edit.availabilities'}}
+  <button class="btn btn--submit">Add availability</button>
+{{/link-to}}
+{{#link-to 'admin.edit.edit'}}
+  <button class="btn btn--submit">Edit</button>
+{{/link-to}}
+{{#link-to 'admin.edit.delete'}}
+  <button class="btn btn--danger">Delete</button>
+{{/link-to}}
 
-
-</div>
+{{outlet}}
