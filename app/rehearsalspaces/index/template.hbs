@@ -21,11 +21,14 @@
     {{#leaflet-map lat=lat lng=lng zoom=zoom scrollWheelZoom=false}}
       {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
 
-      {{#each model as |marker|}}
-        {{#marker-layer location=marker.coordinates}}
-          {{#popup-layer}}
-            <h3>hello</h3>
-          {{/popup-layer}}
+      {{#each model as |space|}}
+        {{#marker-layer location=space.coordinates}}
+            {{#popup-layer}}
+              {{#link-to 'rehearsalspaces.detail' space.id}}
+                <h3>{{space.name}}</h3>
+              {{/link-to}}
+              <p>{{space.streetAddress}}</p>
+            {{/popup-layer}}
         {{/marker-layer}}
       {{/each}}
 
