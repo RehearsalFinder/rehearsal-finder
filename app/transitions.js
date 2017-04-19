@@ -14,4 +14,12 @@ export default function () {
     this.use('toFixL'),
     this.reverse('toFixR')
   );
+
+  // User Dashboard
+  this.transition(
+    // this.fromRoute(''),
+    this.toRoute('user-dashboard'),
+    this.use('toFixUp'),
+    this.reverse('toFixDown')
+  );
 }
