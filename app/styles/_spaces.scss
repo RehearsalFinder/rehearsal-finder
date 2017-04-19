@@ -8,9 +8,12 @@
   justify-content: space-between;
   position: relative;
 
+
+
   &__left {
     position: relative;
     flex-basis: 40%;
+    flex-wrap: nowrap;
   }
 
   &__right {
@@ -36,7 +39,6 @@
       top: 35vh;
       left: 0;
       flex-basis: 100%;
-
     }
 
     &__right {
