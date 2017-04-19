@@ -23,6 +23,6 @@
 </div>
 
 <h3 class="form__heading">View Availabilities for {{space.name}}</h3>
-{{#each model.availabilities as |avail|}}
-  <button class="btn btn--avail btn--is-full-width"></button>
+{{#each space.availabilities as |avail|}}
+  <button class="btn btn--avail btn--is-full-width">{{avail.startTime}} - {{avail.endTime}}</button>
 {{/each}}
