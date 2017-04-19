@@ -7,16 +7,17 @@ export default Ember.Controller.extend({
 
   actions: {
     async createAvail(changeset) {
-      // applies
       await changeset.save();
 
-      const availabilities = this.store.createRecord('availabilities', this.model);
+      const availability = this.store.createRecord('availability', this.model);
 
-      availabilities.set('space', this.space);
+      availability.set('space', this.space);
 
-      await availabilities.save();
+      await availability.save();
 
-      this.transitionToRoute('index');
-    }
+      this.transitionToRoute('admin.edit');
+    },
+
+
   }
 });
