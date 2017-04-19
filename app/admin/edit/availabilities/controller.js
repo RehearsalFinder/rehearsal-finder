@@ -7,11 +7,12 @@ export default Ember.Controller.extend({
 
   actions: {
     async createAvail(changeset) {
+      // applies
       await changeset.save();
 
       const availability = this.store.createRecord('availabilities', this.model);
 
-      availability.set('space', this.model);
+      availability.set('space', this.space);
 
       await availability.save();
 

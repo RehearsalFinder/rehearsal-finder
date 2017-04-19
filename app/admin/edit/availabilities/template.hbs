@@ -1,6 +1,6 @@
 <div class="card--form">
   <div class="form">
-    <h3 class="form__heading">Add a New Rehearsal Space</h3>
+    <h3 class="form__heading">Add a New Availability For {{space.name}}</h3>
     {{#with (changeset model validator) as |forms|}}
       <form method="post" {{action "createAvail" forms on="submit"}}>
         <p class="form__control">
