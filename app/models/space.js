@@ -15,4 +15,5 @@ export default DS.Model.extend({
   featured: DS.attr('string'),
   description: DS.attr('string'),
   rules: DS.attr('string'),
+  coordinates: DS.attr('csv'),
 });
