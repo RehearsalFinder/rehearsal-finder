@@ -73,7 +73,8 @@
               {{input name="date" class="form__control date__control" type="date"}}
             </p>
 
-            <p class="form__control">
+            {{!-- Checkbox inputs --}}
+            {{!-- <p class="form__control">
               <label class="date-form__label" for="time">
                 {{input name="time" type="checkbox" class="date-form__time"}}
                 <span>7:00pm</span>
@@ -99,23 +100,25 @@
             </p>
             <p class="form__control">
               <label class="date-form__label" for="time">
-                {{input name="time" type="checkbox" class="date-form__time"}}
+                {{input name="time" type="checkbox" class="date-form__time btn btn--time"}}
                 <span>7:00pm</span>
               </label>
-            </p>
+            </p> --}}
 
-            <button class="btn btn--submit btn--is-full-width" type="submit">Book It!</button>
+            {{!-- {{#each model.name as |avail|}} --}}
+              <button class="btn btn--avail btn--is-full-width">9:00p - 10:00p</button>
+              <button class="btn btn--unavail btn--is-full-width">10:00p - 11:00p</button>
+            {{!-- {{/each}} --}}
+
 
           {{else}}
-            <div>
+            <div class="unAuth">
               <p>
-                {{#link-to 'register' class="btn btn--submit" }}Sign Up{{/link-to}}
+                {{#link-to 'register' class="accent"}}Sign Up{{/link-to}}
+                or
+                {{#link-to 'login' class="accent"}}Login{{/link-to}}
+                in to book a rehearsal space.
               </p>
-              or
-              <p>
-                {{#link-to 'login' class="btn btn--submit" }}Login{{/link-to}}
-              </p>
-              <p>in to book a rehearsal space.</p>
             </div>
           {{/if}}
         </form>

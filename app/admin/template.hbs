@@ -1,20 +1,18 @@
+<div class="admin-nav">
+  <h2>Admin Panel</h2>
+  <div>
+    {{#link-to 'admin'}}
+    <button class="btn btn--submit">Admin Home</button>
+    {{/link-to}}
 
-<div class="section">
+    {{#link-to 'admin.new'}}
+    <button class="btn btn--submit">Add New Rehearsal Space</button>
+    {{/link-to}}
+  </div>
+</div>
+
+<div class="section section--admin">
   <div class="container">
-    <div class="admin-nav">
-      <h1>Admin Panel</h1>
-
-      <div>
-        {{#link-to 'admin'}}
-          <button class="btn btn--submit">Admin Home</button>
-        {{/link-to}}
-
-        {{#link-to 'admin.new'}}
-          <button class="btn btn--submit">Add New Rehearsal Space</button>
-        {{/link-to}}
-      </div>
-    </div>
-
     {{outlet}}
   </div>
 </div>

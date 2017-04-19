@@ -35,4 +35,17 @@
   &--is-full-width {
     width: 100%;
   }
+
+  &--avail {
+    background: $c-true;
+    color: $c-secondary;
+    margin-bottom: $m-gutter / 2;
+  }
+
+  &--unavail {
+    text-decoration: line-through;
+    background: $c-grey;
+    color: $c-false;
+    margin-bottom: $m-gutter / 2;
+  }
 }

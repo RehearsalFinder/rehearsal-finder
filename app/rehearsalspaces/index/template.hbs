@@ -8,7 +8,7 @@
           {{#each model as |space|}}
             <div class="grid__item">
               {{#link-to 'rehearsalspaces.detail' space.id}}
-                {{#space-card name=space.name streetAddress=space.streetAddress city=space.city state=space.state costPerHour=space.costPerHour}}{{/space-card}}
+                {{#space-card name=space.name city=space.city state=space.state costPerHour=space.costPerHour}}{{/space-card}}
               {{/link-to}}
             </div>
           {{/each}}
