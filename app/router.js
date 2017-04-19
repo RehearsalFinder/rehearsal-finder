@@ -21,7 +21,7 @@ Router.map(function () {
 
   this.route('admin', function () {
     this.route('new');
-    this.route('edit', { path: '/:id' }, function() {
+    this.route('edit', { path: '/:id' }, function () {
       this.route('availabilities');
       this.route('delete');
       this.route('edit');
