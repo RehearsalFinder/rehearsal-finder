@@ -7,10 +7,13 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+  flex-wrap: nowrap;
+
 
   &__left {
     position: relative;
     flex-basis: 40%;
+    flex-wrap: nowrap;
   }
 
   &__right {
@@ -31,11 +34,13 @@
 
   .page {
     flex-direction: column-reverse;
+    flex-wrap: nowrap;
 
     &__left {
       top: 35vh;
       left: 0;
       flex-basis: 100%;
+
 
     }
 
