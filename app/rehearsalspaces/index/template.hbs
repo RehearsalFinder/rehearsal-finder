@@ -21,17 +21,14 @@
     {{#leaflet-map lat=lat lng=lng zoom=zoom scrollWheelZoom=false}}
       {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
 
-      {{#marker-layer location=diamondSound}}
-        {{#popup-layer}}
-          <h3>Diamond Sound Studios</h3>
-        {{/popup-layer}}
-      {{/marker-layer}}
+      {{#each model as |marker|}}
+        {{#marker-layer location=marker.coordinates}}
+          {{#popup-layer}}
+            <h3>hello</h3>
+          {{/popup-layer}}
+        {{/marker-layer}}
+      {{/each}}
 
-      {{#marker-layer location=inkBuilding}}
-        {{#popup-layer}}
-          <h3>Ink Building</h3>
-        {{/popup-layer}}
-      {{/marker-layer}}
 
     {{/leaflet-map}}
   </div>
