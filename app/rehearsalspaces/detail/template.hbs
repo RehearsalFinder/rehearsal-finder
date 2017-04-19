@@ -75,8 +75,8 @@
 
 
 
-            {{#each model.availibilities as |avail|}}
-              <button class="btn btn--avail btn--is-full-width">9:00p - 10:00p</button>
+            {{#each model.availabilities as |avail|}}
+              <button class="btn btn--avail btn--is-full-width">{{avail.startTime}} - {{avail.endTime}}</button>
               {{!-- <button class="btn btn--unavail btn--is-full-width">10:00p - 11:00p</button> --}}
             {{/each}}
 
