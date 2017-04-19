@@ -73,42 +73,12 @@
               {{input name="date" class="form__control date__control" type="date"}}
             </p>
 
-            {{!-- Checkbox inputs --}}
-            {{!-- <p class="form__control">
-              <label class="date-form__label" for="time">
-                {{input name="time" type="checkbox" class="date-form__time"}}
-                <span>7:00pm</span>
-              </label>
-            </p>
-            <p class="form__control">
-              <label class="date-form__label" for="time">
-                {{input name="time" type="checkbox" class="date-form__time"}}
-                <span>7:00pm</span>
-              </label>
-            </p>
-            <p class="form__control">
-              <label class="date-form__label" for="time">
-                {{input name="time" type="checkbox" class="date-form__time"}}
-                <span>7:00pm</span>
-              </label>
-            </p>
-            <p class="form__control">
-              <label class="date-form__label" for="time">
-                {{input name="time" type="checkbox" class="date-form__time"}}
-                <span>7:00pm</span>
-              </label>
-            </p>
-            <p class="form__control">
-              <label class="date-form__label" for="time">
-                {{input name="time" type="checkbox" class="date-form__time btn btn--time"}}
-                <span>7:00pm</span>
-              </label>
-            </p> --}}
 
-            {{!-- {{#each model.name as |avail|}} --}}
+
+            {{#each model.availibilities as |avail|}}
               <button class="btn btn--avail btn--is-full-width">9:00p - 10:00p</button>
-              <button class="btn btn--unavail btn--is-full-width">10:00p - 11:00p</button>
-            {{!-- {{/each}} --}}
+              {{!-- <button class="btn btn--unavail btn--is-full-width">10:00p - 11:00p</button> --}}
+            {{/each}}
 
 
           {{else}}

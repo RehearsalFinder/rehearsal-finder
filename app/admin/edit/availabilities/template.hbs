@@ -21,3 +21,8 @@
     {{/with}}
   </div>
 </div>
+
+<h3 class="form__heading">View Availabilities for {{space.name}}</h3>
+{{#each model.availabilities as |avail|}}
+  <button class="btn btn--avail btn--is-full-width"></button>
+{{/each}}
