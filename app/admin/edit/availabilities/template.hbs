@@ -1,1 +1,28 @@
-THIS IS WHERE AVAILABILITIES FORM GOES! WOO WOO!
+<div class="card--form">
+  <div class="form">
+    <h3 class="form__heading">Add a New Availability For {{space.name}}</h3>
+    {{#with (changeset model validator) as |forms|}}
+      <form method="post" {{action "createAvail" forms on="submit"}}>
+        <p class="form__control">
+          <label>Date</label>
+          {{input value=forms.date placeholder="Date" type="date"}}
+        </p>
+        <p class="form__control">
+          <label>Start Time</label>
+          {{input value=forms.startTime placeholder="Start Time" type="text"}}
+        </p>
+        <p class="form__control">
+          <label>End Time</label>
+          {{input value=forms.endTime placeholder="End Time" type="text"}}
+        </p>
+
+        <button class="btn btn--submit" type="submit">Submit</button>
+      </form>
+    {{/with}}
+  </div>
+</div>
+
+<h3 class="form__heading">View Availabilities for {{space.name}}</h3>
+{{#each space.availabilities as |avail|}}
+  <button class="btn btn--avail btn--is-full-width">{{avail.startTime}} - {{avail.endTime}}, {{avail.date}}</button>
+{{/each}}

@@ -70,45 +70,26 @@
 
           {{#if session.isAuthenticated}}
             <p class="form__control">
-              {{input name="date" class="form__control date__control" type="date"}}
+              {{input name="date" value=formValues.date class="form__control date__control" type="date"}}
             </p>
 
-            {{!-- Checkbox inputs --}}
-            {{!-- <p class="form__control">
-              <label class="date-form__label" for="time">
-                {{input name="time" type="checkbox" class="date-form__time"}}
-                <span>7:00pm</span>
-              </label>
-            </p>
-            <p class="form__control">
-              <label class="date-form__label" for="time">
-                {{input name="time" type="checkbox" class="date-form__time"}}
-                <span>7:00pm</span>
-              </label>
-            </p>
-            <p class="form__control">
-              <label class="date-form__label" for="time">
-                {{input name="time" type="checkbox" class="date-form__time"}}
-                <span>7:00pm</span>
-              </label>
-            </p>
-            <p class="form__control">
-              <label class="date-form__label" for="time">
-                {{input name="time" type="checkbox" class="date-form__time"}}
-                <span>7:00pm</span>
-              </label>
-            </p>
-            <p class="form__control">
-              <label class="date-form__label" for="time">
-                {{input name="time" type="checkbox" class="date-form__time btn btn--time"}}
-                <span>7:00pm</span>
-              </label>
-            </p> --}}
 
-            {{!-- {{#each model.name as |avail|}} --}}
-              <button class="btn btn--avail btn--is-full-width">9:00p - 10:00p</button>
-              <button class="btn btn--unavail btn--is-full-width">10:00p - 11:00p</button>
-            {{!-- {{/each}} --}}
+            {{!-- // if no date selected display 'select a date to view available times' --}}
+            {{!-- // Otherwise display the availablities for the particular date --}}
+            {{!-- IF there are no available dates display 'No availabilities for selected date' --}}
+            {{#if formValues.date}}
+              {{#each model.availabilities as |avail|}}
+
+                {{#if (eq avail.date formValues.date)}}
+                  <button class="btn btn--avail btn--is-full-width">{{avail.startTime}} - {{avail.endTime}}</button>
+                {{/if}}
+
+              {{/each}}
+            {{else}}
+              <p>Select a date to view available times.</p>
+            {{/if}}
+
+
 
 
           {{else}}
