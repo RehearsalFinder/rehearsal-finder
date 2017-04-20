@@ -1,0 +1,7 @@
+<button class="btn btn--upload" {{action "openDialog"}}>
+  {{#if hasBlock}}
+    {{yield}}
+  {{else}}
+    Upload
+  {{/if}}
+</button>
