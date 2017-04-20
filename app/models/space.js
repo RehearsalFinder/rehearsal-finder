@@ -17,4 +17,5 @@ export default DS.Model.extend({
   rules: DS.attr('string'),
   coordinates: DS.attr('csv'),
   availabilities: DS.hasMany('availability'),
+  photoUrl: DS.attr('string'),
 });
