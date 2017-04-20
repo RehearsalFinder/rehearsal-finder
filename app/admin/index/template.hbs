@@ -3,7 +3,7 @@
   {{#each model as |space|}}
     <div class="grid__item">
       {{#link-to 'admin.edit' space.id}}
-        {{#space-card  name=space.name streetAddress=space.streetAddress city=space.city state=space.state costPerHour=space.costPerHour}}{{/space-card}}
+        {{#space-card  name=space.name streetAddress=space.streetAddress city=space.city state=space.state costPerHour=space.costPerHour photo=space.photoUrl}}{{/space-card}}
       {{/link-to}}
     </div>
   {{/each}}
