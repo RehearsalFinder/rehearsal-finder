@@ -73,15 +73,13 @@
               {{input name="date" value=formValues.date class="form__control date__control" type="date"}}
             </p>
 
-
-            {{!-- // if no date selected display 'select a date to view available times' --}}
-            {{!-- // Otherwise display the availablities for the particular date --}}
-            {{!-- IF there are no available dates display 'No availabilities for selected date' --}}
             {{#if formValues.date}}
               {{#each model.availabilities as |avail|}}
 
                 {{#if (eq avail.date formValues.date)}}
-                  <button class="btn btn--avail btn--is-full-width">{{avail.startTime}} - {{avail.endTime}}</button>
+                  {{#link-to 'payment' avail.id}}
+                    <button class="btn btn--avail btn--is-full-width">{{avail.startTime}} - {{avail.endTime}}</button>
+                  {{/link-to}}
                 {{/if}}
 
               {{/each}}

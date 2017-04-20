@@ -27,6 +27,7 @@ Router.map(function () {
       this.route('edit');
     });
   });
+  this.route('payment', { path: '/:id' });
 });
 
 export default Router;
