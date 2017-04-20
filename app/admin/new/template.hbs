@@ -20,6 +20,10 @@
           {{input value=forms.state placeholder="State" type="text"}}
         </p>
         <p class="form__control">
+          <label>Zip</label>
+          {{input value=forms.zip placeholder="Zip" type="text"}}
+        </p>
+        <p class="form__control">
           <label>Cost Per Hour</label>
           {{input value=forms.costPerHour placeholder="Cost Per Hour" type="text"}}
         </p>
@@ -58,6 +62,11 @@
         <p class="form__control">
           <label>Rules</label>
           {{textarea value=forms.rules placeholder="Rules"}}
+        </p>
+        <p class="form__control">
+        {{#file-picker action=(action (mut forms.spaceImg))}}
+          Upload
+        {{/file-picker}}
         </p>
         <button class="btn btn--submit" type="submit">Submit</button>
       </form>

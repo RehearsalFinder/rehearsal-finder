@@ -7,6 +7,7 @@
   font-size: 1rem;
   background: $c-secondary;
   color: $c-primary;
+  font-family: inherit;
 
   &:active {
     position: relative;
@@ -20,6 +21,11 @@
 
   &--center {
     width: inherit;
+  }
+
+  &--upload {
+    background: $c-true;
+    color: $c-secondary;
   }
 
   &--submit {
