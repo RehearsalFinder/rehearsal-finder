@@ -81,7 +81,7 @@
               {{#each model.availabilities as |avail|}}
 
                 {{#if (eq avail.date formValues.date)}}
-                  <button class="btn btn--avail btn--is-full-width">{{avail.date}}, {{avail.startTime}} - {{avail.endTime}}</button>
+                  <button class="btn btn--avail btn--is-full-width">{{avail.startTime}} - {{avail.endTime}}</button>
                 {{/if}}
 
               {{/each}}

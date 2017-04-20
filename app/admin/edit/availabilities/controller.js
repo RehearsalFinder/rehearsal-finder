@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
 
       await availability.save();
 
-      this.transitionToRoute('admin.edit');
+      this.transitionToRoute('admin.edit.availabilities');
     },
 
 
