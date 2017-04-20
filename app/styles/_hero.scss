@@ -1,14 +1,14 @@
 // HERO styles
 .section--hero {
-  background: url('http://www.sir-usa.com/location/los-angeles/photos-stage-5/5.jpg');
+  background: url('https://static.pexels.com/photos/300333/pexels-photo-300333.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vh - 4rem); // header is 4rem
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40rem;
-  background: url('http://www.sir-usa.com/location/los-angeles/photos-stage-5/5.jpg');
+  height: 33rem;
+  background: url('https://static.pexels.com/photos/300333/pexels-photo-300333.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   color: $c-secondary;
@@ -18,5 +18,6 @@
 .hero {
   &__message {
     text-align: center;
+    text-shadow: 1px 1px 4px black;
   }
 }

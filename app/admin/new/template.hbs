@@ -59,6 +59,11 @@
           <label>Rules</label>
           {{textarea value=forms.rules placeholder="Rules"}}
         </p>
+        <p class="form__control">
+        {{#file-picker action=(action (mut changeset.spaceImg))}}
+          Upload
+        {{/file-picker}}
+        </p>
         <button class="btn btn--submit" type="submit">Submit</button>
       </form>
     {{/with}}
