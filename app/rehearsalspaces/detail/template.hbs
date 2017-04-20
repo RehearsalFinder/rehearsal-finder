@@ -75,6 +75,8 @@
 
 
             {{!-- // if no date selected display 'select a date to view available times' --}}
+            {{!-- // Otherwise display the availablities for the particular date --}}
+            {{!-- IF there are no available dates display 'No availabilities for selected date' --}}
             {{#if formValues.date}}
               {{#each model.availabilities as |avail|}}
 
