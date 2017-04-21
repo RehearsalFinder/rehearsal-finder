@@ -1,11 +1,7 @@
 {{!-- REHEARSAL SPACE DETAIL ROUTE --}}
 {{!-- Hero / Slider --}}
-<div class="section section--hero">
-  <div class="container">
-    <div class="hero slider">
-      {{!-- This is gonna be an image carousel or something slidey with different pics! --}}
-    </div>
-  </div>
+<div class="section section--slider">
+  <img class="slider__image" src="{{if model.photoUrl model.photoUrl model.photoDefault}}" alt="">
 </div>
 
 {{!-- Detail --}}
