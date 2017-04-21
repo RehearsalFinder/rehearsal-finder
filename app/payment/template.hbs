@@ -4,7 +4,9 @@
     <p>Date: {{model.date}}</p>
     <p>Time: {{model.startTime}} - {{model.endTime}}</p>
 
-    <button class="btn btn--submit">Confirm booking!</button>
+    {{#link-to 'user-dashboard'}}
+      <button class="btn btn--submit">Confirm booking!</button>
+    {{/link-to}}
 
     {{#link-to 'rehearsalspaces'}}
       <button class="btn btn--danger">Back to spaces</button>
