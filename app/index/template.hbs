@@ -45,7 +45,7 @@
       <div class="card card--form">
         <div class="form">
           <h3 class="form__heading">Sign Up!</h3>
-          {{#with (changeset model validator) as |forms|}}
+          {{#with (changeset formValues validator) as |forms|}}
             <form {{action "saveUser" forms on="submit"}}>
               <p class="form__control">
                 {{input value=forms.firstName placeholder="First Name" type="text"}}

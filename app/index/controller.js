@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
 
       await changeset.save();
 
-      const user = this.store.createRecord('user', this.model);
+      const user = this.store.createRecord('user', this.formValues);
 
       await user.save();
 
