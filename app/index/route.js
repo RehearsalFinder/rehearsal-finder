@@ -5,9 +5,9 @@ export default Ember.Route.extend({
     return this.store.findAll('space');
   },
 
-  // actions: {
-  //   error(err, transition) {
-  //     this.replaceWith('user-dashboard');
-  //   }
-  // }
+  setupController(controller) {
+    this._super(...arguments);
+
+    controller.set('formValues', {});
+  }
 });
