@@ -26,7 +26,7 @@ export default Ember.Controller.extend({
         return this.set('errorMessage', reason.message);
       }
 
-      this.transitionToRoute('user-dashboard');
+      this.transitionToRoute('rehearsalspaces');
     },
   }
 });
